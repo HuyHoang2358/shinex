@@ -7,7 +7,11 @@ export default {
       "./node_modules/tw-elements/js/**/*.js"
   ],
   theme: {
-    extend: {},
+    extend: {
+        colors: {
+            'main-color': '#D0002D'
+        }
+    },
   },
   darkMode: "class",
   plugins: [require("tw-elements/plugin.cjs")],

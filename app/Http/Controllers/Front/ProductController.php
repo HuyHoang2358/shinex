@@ -317,6 +317,6 @@ class ProductController extends Controller
             default:
                 break;
         }
-        return view('front.content.product.productDetail',['product' => $product]);
+        return view('front.content.product.productDetail',['product' => $product, 'page' =>  'product-detail']);
     }
 }

@@ -315,6 +315,7 @@ class ProductController extends Controller
                 ];
                 break;
             default:
+                return view('front.content.notFound');
                 break;
         }
         return view('front.content.product.productDetail',['product' => $product, 'page' =>  'product-detail']);

@@ -31,7 +31,7 @@
                         Giúp làn da trở nên trắng hồng, mịn màng và đầy sức
                         sống.
                     </p>
-                    <a href="{{url('/')}}" class="button-w3ls mt-4"><span class="fa fa-hand-o-right mr-2" aria-hidden="true"></span>
+                    <a href="{{url('/about')}}" class="button-w3ls mt-4"><span class="fa fa-hand-o-right mr-2" aria-hidden="true"></span>
                         Xem thêm
                     </a>
                 </div>
@@ -54,7 +54,7 @@
                         trường đại học nổi tiếng trong và ngoài nước. Các phòng thí nghiệm này dành riêng cho các
                         dịch vụ của các thương hiệu quốc tế như Chanel, Lancome, Dior, Givenchy, Cissley, Leberni,...</p>
 
-                    <a href="{{url('/')}}" style="max-width: 150px;" class="btn button-style button-style-3 mt-sm-5">Xem thêm</a>
+                    <a href="{{url('/about')}}" style="max-width: 150px;" class="btn button-style button-style-3 mt-sm-5">Xem thêm</a>
                 </div>
                 <div class="col-xl-5 col-md-6 right-models text-center mt-md-0 mt-5">
                     <div class="row">
@@ -101,7 +101,7 @@
             <div class="py-xl-4 py-lg-2">
                 <p class="mx-auto font-weight-bold"><span class="fa fa-quote-left mr-3" aria-hidden="true"></span>Các cách chăm sóc da mà không giải quyết
                     được vấn đề về da đều vô nghĩa!<span class="fa fa-quote-right ml-3" aria-hidden="true"></span></p>
-                <a href="{{url('')}}" style="max-width: 250px;" class="btn button-style mt-sm-5 mt-4">Liên hệ với chúng tôi</a>
+                <a href="{{url('/contact')}}" style="max-width: 250px;" class="btn button-style mt-sm-5 mt-4">Liên hệ với chúng tôi</a>
             </div>
         </div>
     </div>
@@ -114,8 +114,6 @@
             <p class="title-sub text-center mb-sm-5 mb-4">Chu kỳ dưỡng da tái tạo lại sức sống mới</p>
             <div class="ins-sec1">
                 <div class="row">
-
-
                     <div class="col-lg-8 mx-auto mt-lg-5">
                         <div class="row">
                             <div class="col-lg-6 my-lg-0 my-md-5">
@@ -191,11 +189,9 @@
                     <img src="{{asset('images/product.jpg')}}" alt="" class="img-fluid">
                 </div>
                 <div class="col-xl-4 col-lg-6 mt-xl-2">
-
                     <h3 class="title text-bl font-weight-bold mb-4">Hợp tác quốc tế với nhiều nhà cung cấp nguyên liệu hàng đầu</h3>
                     <p>Tuân thủ triết lý sản xuất: “đảm bảo chất lượng từ nguồn,” hầu hết các thành phần của các dòng
                         sản phẩm SHINEX được nhập khẩu từ nước ngoài, giúp các hoạt chất của chúng có tác động tốt hơn trên da</p>
-
                     <p>Tiêu chuẩn dược phẩm quốc tế, trước khi đưa ra thị trường được kiểm nghiệm bởi các cơ quan bên
                         thứ ba, phù hợp với các nguyên tắc giám sát an toàn cao nhất</p>
                 </div>

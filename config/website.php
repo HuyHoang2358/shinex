@@ -2,10 +2,10 @@
 
 return [
     "webName" => "Shinex",
-    "phone" => "1234567890",
+    "phone" => "090 5663511",
     "phone2" => "0987654321",
-    "email" => "sale@shinex.vn",
+    "email" => "contact.fishgolden@gmail.com",
     "slogan" => "Các cách chăm sóc da mà không giải quyết được vấn đề về da đều vô nghĩa.",
     "logo"  => "/images/logo/logo.png",
-    "address" => "Số 1, Đại Cồ Việt, Hai Bà Trưng, Hà Nội",
+    "address" => "Tầng 9 Toà nhà Hồ Gươm Plaza, Số 102 Trần Phú, Phường Mộ Lao, Quận Hà Đông, Hà Nội",
 ];

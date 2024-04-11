@@ -45,6 +45,10 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @php
+                                $firstOrdinalNumber = 0;
+                                $lastOrdinalNumber = 0;
+                            @endphp
                             @foreach ($products as $product)
                                 @php
                                     $ordinalNumber =

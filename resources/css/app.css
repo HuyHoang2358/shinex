@@ -15,7 +15,38 @@
 @tailwind components;
 @tailwind utilities;
 
+table{
+    @apply table-fixed 
+}
+
 p {
     @apply leading-[1.6];
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
+th {
+    @apply p-2 min-w-28;
+}
+
+td{
+    @apply p-2;
+    @apply overflow-hidden text-ellipsis whitespace-nowrap min-w-48;
+}
+
+.number-cell-size{
+    @apply max-w-20 min-w-1;
+}
+
+.text-cell-size{
+    @apply min-w-32 lg:min-w-60;
+}
+
+.button-hover{
+    @apply hover:bg-main-color hover:text-white transition-all py-1 px-2 bg-slate-200 rounded-md;
+}
+
 

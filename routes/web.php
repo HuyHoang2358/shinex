@@ -20,6 +20,10 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::get('/gallery', [App\Http\Controllers\HomeController::class, 'gallery'])->name('gallery');
 Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
+/*
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['auth:admin']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});*/
 
 
 Route::middleware('guest:admin')->prefix('admin')->group( function () {
@@ -41,11 +45,11 @@ Route::middleware('auth:admin')->prefix('admin')->group( function () {
     // Product manager
     Route::group(['prefix'=>'product'],function() {
         Route::get('/', [AdminProductController::class,'index'])->name('admin.product.index');
-        Route::get('/add', [AdminProductController::class,'add'])->name('admin.product.add');
+        //Route::get('/add', [AdminProductController::class,'add'])->name('admin.product.add');
         Route::post('/add', [AdminProductController::class,'store'])->name('admin.product.store');
-        Route::get('/edit/{id}', [AdminProductController::class,'edit'])->name('admin.product.edit');
+        //Route::get('/edit/{id}', [AdminProductController::class,'edit'])->name('admin.product.edit');
         Route::post('/edit/{id}', [AdminProductController::class,'update'])->name('admin.product.update');
-        Route::get('/delete/{id}', [AdminProductController::class,'destroy'])->name('admin.product.delete');
+        Route::post('/delete/{id}', [AdminProductController::class,'destroy'])->name('admin.product.delete');
     });
 });
 

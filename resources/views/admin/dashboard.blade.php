@@ -1,4 +1,4 @@
-<x-admin-layout>
+<x-admin-layout >
 
     <div class="container mt-5">
         <div class="row">

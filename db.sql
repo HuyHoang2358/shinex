@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `admins` (
   UNIQUE KEY `admins_email_unique` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table shinex_db.admins: ~1 rows (approximately)
+-- Dumping data for table shinex_db.admins: ~0 rows (approximately)
 INSERT INTO `admins` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 	(1, 'admin', 'admin@gmail.com', '$2y$12$kHU0yzCUwa4H9nxQGG7Lt.gN9EkrAkXgU7Zo715qbnmzpYM5.DKqi', NULL, '2024-03-27 06:20:23', '2024-03-27 06:20:23');
 
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table shinex_db.migrations: ~7 rows (approximately)
+-- Dumping data for table shinex_db.migrations: ~6 rows (approximately)
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 	(1, '2014_10_12_000000_create_users_table', 1),
 	(2, '2014_10_12_100000_create_password_reset_tokens_table', 1),
@@ -119,9 +119,19 @@ CREATE TABLE IF NOT EXISTS `products` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table shinex_db.products: ~0 rows (approximately)
+-- Dumping data for table shinex_db.products: ~9 rows (approximately)
+INSERT INTO `products` (`id`, `name`, `slug`, `images`, `description`, `content`, `created_at`, `updated_at`) VALUES
+	(1, '1', '1', '""', '1', '1', '2024-04-11 18:32:48', '2024-04-11 18:32:49'),
+	(2, '2', '2', '""', '2', '2', '2024-04-11 18:32:36', '2024-04-11 18:32:41'),
+	(3, '3', '1', '""', '1', '1', '2024-04-11 18:32:48', '2024-04-11 18:32:49'),
+	(4, '4', '2', '""', '2', '2', '2024-04-11 18:32:36', '2024-04-11 18:32:41'),
+	(5, '5', '2', '""', '2', '2', '2024-04-11 18:32:36', '2024-04-11 18:32:41'),
+	(6, '6', '2', '""', '2', '2', '2024-04-11 18:32:36', '2024-04-11 18:32:41'),
+	(7, '7', '2', '""', '2', '2', '2024-04-11 18:32:36', '2024-04-11 18:32:41'),
+	(8, '8', '2', '""', '2', '2', '2024-04-11 18:32:36', '2024-04-11 18:32:41'),
+	(9, '9', '2', '""', '2', '2', '2024-04-11 18:32:36', '2024-04-11 18:32:41');
 
 -- Dumping structure for table shinex_db.users
 CREATE TABLE IF NOT EXISTS `users` (

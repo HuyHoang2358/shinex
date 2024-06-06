@@ -1,9 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
 use App\Http\Controllers\Controller;
-use App\Models\product;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Contracts\Foundation\Application;
@@ -12,97 +11,72 @@ use Illuminate\Contracts\View\View;
 
 class AdminProductController extends Controller
 {
-    public function __construct()
-    {
+    public function __construct(){
         $this->middleware('auth:admin');
     }
 
     public function index(): Factory|View|Application
     {
-        $cpus = Cpu::paginate(config("system.perPage"));
-        return view('admin.content.component.cpu.index', ["cpus" => $cpus]);
-    }
-    public function add(): Factory|View|Application
-    {
-        return view("admin.content.component.cpu.add",[
-            "categories" => $this->getCategories(),
-            "brands" => $this->getBrands(),
+        $products = Product::orderBy('updated_at', 'desc')->paginate(3);
+        $num_of_records = Product::count();
+
+        return view('admin.content.product.index', [
+            'page' => "product.index",
+            'products' => $products,
+            'num_of_records' => $num_of_records
         ]);
+
     }
 
-    private function fillDataToCpu($item, $input): void
+    public function store(Request $request)
     {
-        $item["socket"] = $input["socket"] ?? "";
-        $item["core_type"] = $input["core_type"] ?? "";
-        $item["core_series"] = $input["core_series"] ?? "";
-        $item->save();
-    }
-
-
-    public function store(Request $request): RedirectResponse
-    {
-        $input = $request->all();
-
-        // Create post
-        $post = new Post();
-        $this->fillDataToPost($post, $input);
-
-        // Create CPU
-        $cpu = new Cpu();
-        $this->fillDataToCpu($cpu, $input);
-
-        // Create Component
-        $component = new Component();
-        $input["detail_id"] = $cpu->id;
-        $this->fillDataToComponent($component, $input);
-
-        // Create product
+        // post them mới san pham
+        // redirect ve trang danh sach san pham
         $product = new Product();
-        $input["post_id"] = $post->id;
-        $input["detail_id"] = $component->id;
-        $this->fillDataToProduct($product, $input);
+        $product->name = $request->input('product-name');
+        $product->images = $request->input('file-path');
+        $product->slug = "default";
+        $product->description = $request->input('product-description');
+        $product->content = $request->input('product-content');
 
-        // Redirect to main board index page
-        return redirect()->route('admin.component.cpu.index');
+        $product->save();
+
+        session()->flash('success', 'Thêm sản phẩm thành công!');
+
+        return redirect()->back();
+
     }
-    public function edit($id): Factory|View|Application
+
+    public function update($id, Request $request): \Illuminate\Http\RedirectResponse
     {
-        $item = Cpu::find($id);
-        return view("admin.content.component.cpu.edit",[
-            "categories" => $this->getCategories(),
-            "brands" => $this->getBrands(),
-            "item" =>$item
-        ]);
+        // post update san pham
+        // redirect ve trang danh sach san pham
+        $product = Product::find($id);
+
+        $product->name = $request->input('edit-name');
+        $product->images = $request->input('file-path');
+        $product->description = $request->input('edit-description');
+        $product->content = $request->input('edit-content');
+
+        $product->save();
+
+        session()->flash('success', 'Cập nhật sản phẩm thành công!');
+
+        return redirect()->back();
+
     }
-    public function update($id, Request $request): RedirectResponse
+
+    public function destroy($id)
     {
-        $input = $request->all();
+        // xoa san pham
+        // redirect ve trang danh sach san pham
 
-        // Update cpu
-        $cpu = Cpu::find($id);
-        $this->fillDataToCpu($cpu, $input);
+        $product = Product::find($id);
+        $product->delete();
 
-        // Update Component
-        $component = Component::find($cpu->component->id);
-        $this->fillDataToComponent($component, $input);
+        session()->flash('success', 'Xóa sản phẩm thành công!');
 
-        // Update product
-        $product = Product::find($cpu->component->product->id);
-        $this->fillDataToProduct($product, $input);
+        return redirect()->back();
 
-        // Update Post
-        $post = Post::find($product->post_id);
-        $this->fillDataToPost($post, $input);
-
-        return redirect()->route('admin.component.cpu.index');
-    }
-    public function destroy($id): RedirectResponse
-    {
-        $item = Cpu::find($id);
-        $product = Product::find($item->component->product->id);
-        if ($product){
-            $product->delete();
-        }
-        return redirect()->route("admin.component.cpu.index");
     }
 }

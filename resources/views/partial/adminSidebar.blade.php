@@ -17,7 +17,7 @@
         </div>
 
         <div class="w-full h-full py-4 mt-12">
-            <a href="{{route('admin.homepage')}}">
+            <a href="{{route('admin.product.index')}}">
                 <div class="w-full p-4 border-l-4 border-[#151515] hover:bg-[#262626] hover:border-main-color">
                     <div class="w-full flex flex-row gap-2 items-center text-white">
                         <div class="w-12 flex justify-center items-center">
@@ -56,4 +56,3 @@
         </div>
     </div>
 </div>
-

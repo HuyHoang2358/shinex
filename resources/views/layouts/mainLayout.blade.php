@@ -38,7 +38,7 @@
           rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
           rel="stylesheet">
-    <!-- //Web-Fonts -->
+    <!-- //Web-Fonts -->    
     @yield('head')
 </head>
 <body>

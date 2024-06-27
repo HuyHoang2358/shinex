@@ -89,4 +89,16 @@
             </div>
         </div>
     </div>
+
+<div>
+    <div class="flex mx-96">
+        <div class="w-[60%]">
+            <img class="w-10" src="{{asset('images/products/2.jpg')}}" alt="">
+        </div>
+        <div class="w-[40%]">
+            <p>Chăm sóc da mặt * làm mờ sẹo</p>
+            <h1 class="font-semibold text-xl">SHINEX - Soothing balance repair cream</h1>
+        </div>
+    </div>
+</div>
 @endsection

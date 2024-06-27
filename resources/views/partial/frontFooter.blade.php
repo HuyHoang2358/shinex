@@ -1,99 +1,89 @@
 <!-- footer -->
-<footer class="footer-w3ls py-5">
-    <div class="container py-sm-4">
-        <div class="row">
-            <div class="col-lg-3 col-sm-6 agileinfo_footer_grid">
-                <!-- logo -->
-                <div class="logo-2 mb-sm-4 mb-3">
-                    <h2><a href="{{url('/')}}">{{Config::get('website.webName')}}</a></h2>
-                </div>
-                <!-- //logo -->
-                <p>{{Config::get('website.slogan')}}</p>
-            </div>
-            <div class="col-lg-3 col-sm-6 agileinfo_footer_grid mt-sm-0 mt-5">
-                <h4 class="mb-sm-5 mb-4">Sản phẩm nổi bật</h4>
-                <ul class="list-unstyled">
-                    <li><span class="fa fa-angle-double-right mr-2"></span> Whitening Remove Freckle Cream</li>
-                    <li><span class="fa fa-angle-double-right mr-2"></span> Repair Anti-Aging Cream</li>
-                    <li><span class="fa fa-angle-double-right mr-2"></span> Soothing balance repair cream</li>
-                    <li><span class="fa fa-angle-double-right mr-2"></span> Repairing active white serum</li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-sm-6 agileinfo_footer_grid pl-lg-0 mt-lg-0 mt-5">
-                <h4 class="mb-sm-5 mb-4">Bộ sưu tập</h4>
-                <div class="d-flex">
-                    @php
-                        $album1 = [
-                            "images/products/image_1_1.jpg",
-                            "images/products/image_1_2.jpg",
-                            "images/products/image_1_3.jpg",
-                        ]
-                    @endphp
-                    @foreach($album1 as $image)
-                        <div class="col-sm-4 col-3 agileinfo_footer_grid1">
-                            <a href="#">
-                                <img src="{{asset($image)}}" alt=" " class="img-fluid">
-                            </a>
-                        </div>
-                    @endforeach
-                </div>
-                <div class="d-flex mt-2">
-                    @php
-                        $album1 = [
-                            "images/products/image_1_4.jpg",
-                            "images/products/image_1_5.jpg",
-                            "images/products/image_1_6.jpg",
-                        ]
-                    @endphp
-                    @foreach($album1 as $image)
-                        <div class="col-sm-4 col-3 agileinfo_footer_grid1">
-                            <a href="#">
-                                <img src="{{asset($image)}}" alt=" " class="img-fluid">
-                            </a>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 agileinfo_footer_grid mt-lg-0 mt-5">
-                <h4 class="mb-sm-5 mb-4">Địa chỉ</h4>
-                <ul class="list-unstyled">
-                    <li><span class="fa fa-map-marker mr-2"></span> {{Config::get('website.address')}}</li>
-                    <li>
-                        <span class="fa fa-envelope mr-2"></span>
-                        <a href="mailto:{{Config::get('website.email')}}">{{Config::get('website.email')}}</a>
-                    </li>
-                    <li>
-                        <span class="fa fa-phone mr-2"></span>{{Config::get('website.phone')}}</li>
-                    <li>
-                        <span class="fa fa-clock-o mr-2"></span>Hàng ngày 9:00-17:00</li>
-                </ul>
-            </div>
+<div class="flex bg-[#ffece1] px-96 py-3 w-full justify-between items-center">
+    <div class="flex gap-5">
+        <div class="relative px-5 py-5 rounded-full bg-[#ffb9a4]">
+            <a href="#"><i class="fa-brands fa-facebook absolute top-[7px] left-[6px] text-[28px] text-white hover:rotate-45 duration-700 ease-in-out"></i></a>
+        </div>
+        <div class="relative px-5 rounded-full bg-[#ffb9a4]">
+            <a href="#"><i class="fa-brands fa-facebook-messenger absolute top-[7px] left-[6px] text-[28px] text-white hover:rotate-45 duration-700 ease-in-out"></i></a>
+        </div>
+        <div class="relative px-5 rounded-full bg-[#ffb9a4]">
+            <a href="#"><i class="fa-brands fa-instagram absolute top-[7px] left-2 text-[28px] text-white hover:rotate-45 duration-700 ease-in-out"></i></a>
+        </div>
+        <div class="relative px-5 rounded-full bg-[#ffb9a4]">
+            <a href="#"><i class="fa-brands fa-youtube absolute top-2 left-[6px] text-[26px] text-white hover:rotate-45 duration-700 ease-in-out"></i></a>
         </div>
     </div>
-</footer>
-<!-- //footer -->
-
-<!-- footer last -->
-<div class="newsletter-main text-center py-md-5 py-4">
-    <div class="container">
-        <a href="{{url('/')}}" class="move-top text-center"></a>
-        <!-- newsletter -->
-        <div class="agileinfo_footer_grid mt-3">
-            <h4 class="mb-4"> Đăng ký nhận tin tức</h4>
-            <form action="#" method="post" class="newsletter">
-                <input class="email" type="email" name="email" placeholder=" Địa chỉ email của bạn..." required>
-                <button type="submit" class="btn"> Đăng ký </button>
-            </form>
-            <div class="clearfix"> </div>
-        </div>
-        <!-- //newsletter -->
-        <!-- copyright -->
-        <div class="w3agile_footer_copy mt-sm-5 mt-4">
-            <p>© 2024 Shinex. All rights reserved | Design by
-                <a href="{{url('/')}}">Shinex.</a>
-            </p>
-        </div>
-        <!-- //copyright -->
+    <div class="flex items-center">
+        <i class="fa-solid fa-envelope text-4xl text-[#ffb9a4]"></i>
+        <p class="pl-3 pr-6 font-semibold text-[16px] text-black">Nhận bản tin làm đẹp từ chúng tôi</p>
+        <input class="px-4 py-2 text-sm w-72 outline-none" type="text" placeholder="Nhập email của bạn">
+        <button class="px-4 py-2 text-sm font-semibold text-[#a05139] bg-[#ffb9a4] hover:bg-[#f9d9c6]">Đăng kí</button>
     </div>
 </div>
-<!-- //footer last -->
+
+<div class="flex px-96 py-12">
+    <div class="basis-3/4 flex gap-5">
+        <div class="w-[34%]">
+            <img class="w-48 pb-5" src="{{asset('/images/logo/logo.png')}}" alt="">
+            <ul>
+                <li class="flex items-center gap-3 py-2">
+                    <i class="fa-solid fa-location-dot text-[#ffb9a4]"></i>
+                    <p class="flex items-center text-sm" >266 Đội Cấn, Liễu Giai, Hà Nội</p>
+                </li>
+                <li class="flex items-center gap-3 py-2">
+                    <i class="fa-solid fa-envelope text-[#ffb9a4]"></i>
+                    <a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">shinex@gmail.com</p></a>
+                </li>
+                <li class="flex items-center gap-3 py-2">
+                    <i class="fa-solid fa-phone text-[#ffb9a4]"></i>
+                    <a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">1800 1069</p></a>
+                </li>
+                <li class="flex items-center gap-3 py-2">
+                    <i class="fa-solid fa-map-location-dot text-[#ffb9a4]"></i>
+                    <a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">Hệ thống cửa hàng</p></a>
+                </li>
+            </ul>
+        </div>
+        <div class="w-[33%] px-5">
+            <h2 class="py-3 text-sm font-bold text-[#a05139] tracking-wider">HỖ TRỢ KHÁCH HÀNG</h2>
+            <ul>
+                <li class="flex items-center gap-3 py-1"><a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">Trang chủ</p></a></li>
+                <li class="flex items-center gap-3 py-1"><a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">Giới thiệu</p></a></li>
+                <li class="flex items-center gap-3 py-1"><a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">Sản phẩm</p></a></li>
+                <li class="flex items-center gap-3 py-1"><a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">Liên hệ</p></a></li>
+                <li class="flex items-center gap-3 py-1"><a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">Tin tức</p></a></li>
+                <li class="flex items-center gap-3 py-1"><a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">Giỏ hàng</p></a></li>
+                <li class="flex items-center gap-3 py-1"><a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">Tìm kiếm</p></a></li>
+            </ul>
+        </div>
+        <div class="w-[33%] px-5">
+            <h2 class="py-3 text-sm font-bold text-[#a05139] tracking-wider">CHÍNH SÁCH</h2>
+            <ul>
+                <li class="flex items-center gap-3 py-1"><a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">Trang chủ</p></a></li>
+                <li class="flex items-center gap-3 py-1"><a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">Giới thiệu</p></a></li>
+                <li class="flex items-center gap-3 py-1"><a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">Sản phẩm</p></a></li>
+                <li class="flex items-center gap-3 py-1"><a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">Liên hệ</p></a></li>
+                <li class="flex items-center gap-3 py-1"><a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">Tin tức</p></a></li>
+                <li class="flex items-center gap-3 py-1"><a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">Giỏ hàng</p></a></li>
+                <li class="flex items-center gap-3 py-1"><a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">Tìm kiếm</p></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="basis-1/4">
+        <div>
+            <h2 class="py-3 text-sm font-bold text-[#a05139] tracking-wider">GIỜ MỞ CỬA</h2>
+            <p class="text-sm">Từ 9:00 - 21:30 tất cả các ngày trong tuần (bao gồm cả các ngày lễ, ngày Tết).</p>
+        </div>
+        <div class="py-2">
+            <h2 class="pt-3 pb-1 text-sm font-bold text-[#a05139] tracking-wider">GÓP Ý, KHIẾU NẠI</h2>
+            <div class="flex items-center gap-3 py-1">
+                <i class="fa-solid fa-phone text-[#ffb9a4]"></i>
+                <a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">1800 1069</p></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="h-[2px] w-full bg-gray-300"></div>
+<p class="py-5 text-center text-sm text-gray-500">© 2024 Shinex Vietnam. All rights reserved.</p>

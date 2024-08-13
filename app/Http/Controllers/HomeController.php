@@ -10,8 +10,7 @@ class HomeController extends Controller
 
     public function index(): View|Application|Factory
     {
-        // views.newhomepage.blade.php
-        return view('homepage', ["page"=>'homepage']);
+        return view('homepage');
     }
 
     public function gallery(): View|Application|Factory
@@ -22,8 +21,10 @@ class HomeController extends Controller
 
     public function contact(): View|Application|Factory
     {
-        return view('front.content.contact', ["page"=>'contact']);
+        return view('front.content.contact');
     }
+
+
     public function about(): View|Application|Factory
     {
         return view('front.content.about', ["page"=>'about']);

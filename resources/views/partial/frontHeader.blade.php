@@ -1,6 +1,6 @@
 <nav class="px-36 pt-10 pb-5 flex justify-between">
     <div>
-        <a href="#">
+        <a href="{{route('homepage')}}">
             <img class="w-48 pb-5" src="{{asset('/images/logo/logo.png')}}" alt="">
         </a>
     </div>

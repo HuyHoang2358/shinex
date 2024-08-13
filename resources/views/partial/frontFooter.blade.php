@@ -1,5 +1,5 @@
 <!-- footer -->
-<div class="flex bg-[#ffece1] px-96 py-3 w-full justify-between items-center">
+<div class="flex bg-[#ffece1] px-52 py-3 w-full justify-between items-center gap-5">
     <div class="flex gap-5">
         <div class="relative px-5 py-5 rounded-full bg-[#ffb9a4]">
             <a href="#"><i class="fa-brands fa-facebook absolute top-[7px] left-[6px] text-[28px] text-white hover:rotate-45 duration-700 ease-in-out"></i></a>
@@ -15,8 +15,8 @@
         </div>
     </div>
     <div class="flex items-center">
-        <i class="fa-solid fa-envelope text-4xl text-[#ffb9a4]"></i>
-        <p class="pl-3 pr-6 font-semibold text-[16px] text-black">Nhận bản tin làm đẹp từ chúng tôi</p>
+{{--        <i class="fa-solid fa-envelope text-4xl text-[#ffb9a4]"></i>--}}
+{{--        <p class="pl-3 pr-6 font-semibold text-[16px] text-black text-center">Nhận bản tin làm đẹp <br> từ chúng tôi</p>--}}
         <input class="px-4 py-2 text-sm w-72 outline-none" type="text" placeholder="Nhập email của bạn">
         <button class="px-4 py-2 text-sm font-semibold text-[#a05139] bg-[#ffb9a4] hover:bg-[#f9d9c6]">Đăng kí</button>
     </div>
@@ -87,3 +87,4 @@
 
 <div class="h-[2px] w-full bg-gray-300"></div>
 <p class="py-5 text-center text-sm text-gray-500">© 2024 Shinex Vietnam. All rights reserved.</p>
+

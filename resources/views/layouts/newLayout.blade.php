@@ -17,8 +17,9 @@
 
 </head>
 <body>
-    @include('partial.frontHeader')
+{{--    @include('partial.frontHeader')--}}
 
+    @include('partial.sanpham')
 
     @include('partial.frontFooter')
 

@@ -6,7 +6,7 @@
     </div>
     <div>
         <div class="flex gap-12">
-            <a class="text-lg font-serif text-blue-400" href="#">SẢN PHẨM</a>
+            <a class="text-lg font-serif text-blue-400" href="../partial/sanpham.blade.php">SẢN PHẨM</a>
             <a class="text-lg font-serif" href="#">CONTACT</a>
             <a class="text-lg font-serif text-blue-400" href="#">ABOUT US</a>
             <a class="text-lg font-serif" href="">
@@ -21,13 +21,15 @@
 
 <div>
     <div class="relative">
-        <img class="h-[60%]" src="{{asset('/images/nav/6.jpg')}}" alt="">
-        <div class="h-20 bg-white absolute left-[50%] translate-x-[-50%] bottom-[-40px] flex items-center  px-24 border-[1px] border-gray-300 gap-16">
+        <div class="h-[450px] w-full bg-red-200" >
+            <img class="h-full w-full" src="{{asset('/images/nav/4.jpg')}}" alt="">
+        </div>
+        <div class="h-16 bg-white absolute left-[50%] translate-x-[-50%] bottom-[-40px] flex items-center  px-24 border-[1px] border-gray-300 gap-16">
             <div class="flex justify-center items-center gap-3">
-                <div>
-                    <img class="h-10 w-10" src="{{asset('/images/logo/logo.png')}}" alt="">
+                <div class="w-12">
+                    <img class="w-[80%]"  src="{{asset('/images/logo/policy1.png')}}" alt="">
                 </div>
-                <div>
+                <div class="">
                     <h1 class="text-lg font-bold w-32">FREESHIP</h1>
                     <p class="text-xs -tracking-tighter">Miễn phí vận chuyển</p>
                 </div>

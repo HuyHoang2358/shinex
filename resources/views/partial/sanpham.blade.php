@@ -1,4 +1,4 @@
-@include('partial.frontFooter')
+@include('partial.frontHeader')
 
 <div class="flex px-20 gap-16 items-center">
     <div class="basis-1/2 h-[90%]">

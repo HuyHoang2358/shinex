@@ -22,7 +22,7 @@
     </div>
 </div>
 
-<div class="flex px-96 py-12">
+<div class="flex px-32 py-12">
     <div class="basis-3/4 flex gap-5">
         <div class="w-[34%]">
             <img class="w-48 pb-5" src="{{asset('/images/logo/logo.png')}}" alt="">

@@ -10,6 +10,7 @@ class HomeController extends Controller
 
     public function index(): View|Application|Factory
     {
+        // trang chủ
         return view('homepage');
     }
 

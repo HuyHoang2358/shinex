@@ -7,11 +7,11 @@
     <div>
         <div class="flex gap-10 text-base font-serif">
             <a href="{{route('homepage')}}">TRANG CHỦ</a>
-            <a class="text-blue-400" href="{{route('contact')}}">CONTACT</a>
-            <a href="{{route('about')}}">ABOUT US</a>
+            <a class="text-blue-400" href="{{route('contact')}}">LIÊN HỆ</a>
+            <a href="{{route('about')}}">VỀ CHÚNG TÔI</a>
             <div class="group/item relative">
-                <a class="text-blue-400" href="../partial/sanpham.blade.php">SẢN PHẨM <i class="fa-solid fa-angles-down"></i></a>
-                <div class="group-hover/item:block hidden absolute z-50 bg-[#333] w-[170%] rounded-md">
+                <a class="text-blue-400" href="../partial/sanpham.blade.php">SẢN PHẨM <i class="fa-solid fa-angles-down pl-1"></i></a>
+                <div class="group-hover/item:block hidden absolute z-50 bg-blue-400 w-[170%] rounded-md">
                     <ul class="text-white p-2 text-sm">
                         <li class="px-3 py-2 my-2 hover:bg-white hover:text-gray-700 rounded-md duration-300 ease-in-out">Whitening Remove Freckle Cream</li>
                         <li class="px-3 py-2 my-2 hover:bg-white hover:text-gray-700 rounded-md duration-300 ease-in-out">Repair Anti-Aging Cream</li>

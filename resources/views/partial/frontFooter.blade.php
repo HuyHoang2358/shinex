@@ -29,15 +29,15 @@
             <ul>
                 <li class="flex items-center gap-3 py-2">
                     <i class="fa-solid fa-location-dot text-[#ffb9a4]"></i>
-                    <p class="flex items-center text-sm" >266 Đội Cấn, Liễu Giai, Hà Nội</p>
+                    <p class="flex items-center text-sm" >{{Config::get('website.address')}}</p>
                 </li>
                 <li class="flex items-center gap-3 py-2">
                     <i class="fa-solid fa-envelope text-[#ffb9a4]"></i>
-                    <a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">shinex@gmail.com</p></a>
+                    <a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">{{Config::get('website.email')}}</p></a>
                 </li>
                 <li class="flex items-center gap-3 py-2">
                     <i class="fa-solid fa-phone text-[#ffb9a4]"></i>
-                    <a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">1800 1069</p></a>
+                    <a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">{{Config::get('website.hotline')}}</p></a>
                 </li>
                 <li class="flex items-center gap-3 py-2">
                     <i class="fa-solid fa-map-location-dot text-[#ffb9a4]"></i>
@@ -79,7 +79,7 @@
             <h2 class="pt-3 pb-1 text-sm font-bold text-[#a05139] tracking-wider">GÓP Ý, KHIẾU NẠI</h2>
             <div class="flex items-center gap-3 py-1">
                 <i class="fa-solid fa-phone text-[#ffb9a4]"></i>
-                <a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">1800 1069</p></a>
+                <a href="#"><p class="flex items-center text-sm hover:text-[#bf664e]">{{Config::get('website.hotlinehome')}}</p></a>
             </div>
         </div>
     </div>

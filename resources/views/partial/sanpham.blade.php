@@ -125,7 +125,7 @@
 
 
 <div class="px-32 py-10">
-    <h1 class="text-2xl font-semibold text-black leading-10 py-9    "><span class="font-normal">SẢN PHẨM NÀO</span><br>
+    <h1 class="text-2xl font-semibold text-black leading-10 py-9"><span class="font-normal">SẢN PHẨM NÀO</span><br>
         PHÙ HỢP VỚI BẠN?
     </h1>
     <div class="flex gap-5 text-black">

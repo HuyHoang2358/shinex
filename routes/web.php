@@ -58,5 +58,6 @@ Route::middleware('auth:admin')->prefix('admin')->group( function () {
 
 
 Auth::routes();
+// Xem thông tin chi tiết từng sản phẩm
+Route::get('/{slug}',[ProductController::class, 'detail'])->name('product.detail'); // shinex.th/{slug}
 
-Route::get('/{slug}',[ProductController::class, 'detail'])->name('product.detail');

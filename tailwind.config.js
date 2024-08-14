@@ -4,8 +4,8 @@ export default {
       "./resources/views/**/*.blade.php",
       "./resources/views/*.blade.php",
       "./resources/css/app.css",
-      "./resources/js/app.js",
-      "./node_modules/tw-elements/js/**/*.js",
+      "./resources/**/*.js",
+      "./node_modules/flowbite/**/*.js",
 
   ],
   theme: {
@@ -17,8 +17,11 @@ export default {
             'footer-bg':"url('/)"
         }
     },
+    fontFamily: {
+      'roboto': ['Roboto', 'sans-serif'],
+    },
   },
-  darkMode: "class",
-  plugins: [require("tw-elements/plugin.cjs")],
+/*  darkMode: "class",*/
+  plugins: [require("flowbite/plugin")],
 }
 

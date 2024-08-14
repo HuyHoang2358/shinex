@@ -17,7 +17,9 @@
 </head>
 <body>
     @include('partial.frontHeader')
-    @yield('content')
+    <div class="container mx-auto">
+        @yield('content')
+    </div>
     @include('partial.frontFooter')
 
 </body>

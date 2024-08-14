@@ -12,100 +12,238 @@ class ProductController extends Controller
 {
     public function detail($slug): View|Application|Factory
     {
+        $repair_anti_aging_cream = (object)[
+            'name' => 'Repair Anti-Aging Cream',
+            'slug' => 'repair-anti-aging-cream',
+            'title' => 'Kem dưỡng phục hồi chống lão hoá',
+            'components' => [
+                (object)[
+                    "name" => 'Tocopherol acetate',
+                    'title' => 'Có tác dụng chống oxy hóa tốt, là chất tự nhiên tan
+                                         trong dầu, là chất dưỡng ẩm tốt cho da. Rất hiệu
+                                         quả trong việc giữ ẩm và duy trì mô liên kết, cũng
+                                         như bảo vệ da khỏi tia UV. Thành phần này làm cho
+                                         da mềm mại và giữ được độ ẩm, thúc đẩy quá trình
+                                         lành vết thương, ngăn ngừa viêm nhiễm, ngăn ngừa
+                                         da thô ráp và nứt nẻ, đồng thời cải thiện các vết
+                                         thâm.',
+                    'image' => '/images/components/tocopherol-acetate.png'
+                ],
+                (object)[
+                    "name" => 'Sữa ong chúa',
+                    'title' => 'Sữa ong chúa là chất tiết ra từ tuyến hầu của ong thợ
+                                         non nuôi ấu trùng trong tổ, là thức ăn cho ấu trùng
+                                        thứ sẽ trở thành ong chúa, tương đương với sữa của
+                                         động vật có vú, nên sữa ong chúa còn được gọi là sữa
+                                         ong. Sữa ong chúa có tác dụng chống lão hoá da, có
+                                         tác dụng rõ rệt đối với các đốm màu vàng sẫm, đốm
+                                         màu, và nếp nhăn. Nó có tác dụng phục hồi mạnh mẽ
+                                         và làm dịu các mô nhạy cảm.',
+                    'image' => '/images/components/sua-ong-chua.png'
+                ],
+                (object)[
+                    "name" => 'Lactobacillus/ sữa đậu nành lên men',
+                    'title' => ' Lactococcus Ferment Lysate rất giàu axit lactic và natri lactate, đây là
+                                         axit hòa tan trong nước chính trong thành phần giữ ẩm tự nhiên của
+                                         con người (NMF). Nó có khả năng hút ẩm mạnh mẽ, tăng cường hiệu
+                                         quả quá trình hydrat hóa của lớp biểu bì và ngăn ngừa mất nước cho
+                                         da. Axit lactic và natri lactate tạo thành dung dịch đệm, có ái lực tốt với
+                                         da và có thể điều chỉnh độ pH của da. Lactococcus Ferment Lysate
+                                         chứa axit amin, peptide nhỏ, polysacarit, vitamin B và các thành phần
+                                         có lợi khác để chăm sóc da, có thể tăng cường quá trình trao đổi chất
+                                         của lớp sừng, loại bỏ các gốc tự do của tế bào, ức chế quá trình
+                                         peroxid hóa lipid, tăng hiệu suất phục hồi của cơ thể, ức chế hoạt động
+                                         tyrosinase của tế bào và có chức năng phục hồi, làm trắng và chống
+                                         oxy hóa',
+                    'image' => '/images/components/lactobacillus.png'
+                ],
+                (object)[
+                    "name" => 'Citric acid',
+                    'title' => 'Axit citric được chiết xuất từ chanh và là một trong những axit
+                                         trái cây. Trong mỹ phẩm, nó chủ yếu được sử dụng làm chất
+                                         chelat, chất đệm, chất điều chỉnh axit và bazơ, đồng thời cũng
+                                         có thể được sử dụng làm chất bảo quản tự nhiên, là một chất
+                                         tuần hoàn quan trọng trong cơ thể con người. Nó có thể tăng
+                                         tốc độ tái tạo keratin, làm bong hắc tố, se khít lỗ chân lông,
+                                         loại bỏ mụn đầu đen. Trên da, nó có thể đóng vai trò dưỡng
+                                         ẩm, làm trắng da, cải thiện các đốm đen, thô ráp và các tình
+                                         trạng khác trên da.',
+                    'image' => '/images/components/citric-acid.png'
+                ]
+            ],
+            'numbers' => [
+                (object)[
+                    'image' =>'images/products/image_1_1.jpg',
+                    'title' => 'Nuôi dưỡng, làm trắng từ sâu bên trong',
+                    'content' => 'Giúp cải thiện quá trình trao đổi chất của da, làm sáng tông màu da, cải thiện tình trạng da xỉn màu.'
+                ],
+                (object)[
+                    'image' => 'images/products/image_1_2.jpg',
+                    'title' => 'Phục hồi làn da từ bên ngoài, mang lại làn da căng bóng đầy sức sống.',
+                    'content' => 'Chứa các thành phần phục hồi từ thực vật, làm giảm các đốm tàn nhang, làm dịu da và dưỡng ẩm'
+                ],
+            ],
+            'images' => [
+                'images/products/image_1_1.jpg',
+                'images/products/image_1_2.jpg',
+                'images/products/image_1_3.jpg',
+                'images/products/image_1_4.jpg',
+                'images/products/image_1_5.jpg',
+                'images/products/image_1_6.jpg',
+                'images/products/image_1_7.jpg',
+                'images/products/image_1_8.jpg',
+            ],
+            'assigns' => [
+                (object)[
+                    "title" => 'Da sần sùi, lỗ chân lông to',
+                    "image" => '/images/assigns/da-mat-san-sui-lo-chan-long-to.jpg',
+                    "content" => 'Da mặt sần sùi lỗ chân lông to là tình trạng nhiều người gặp phải. Tình trạng này xảy ra khi da mất độ ẩm, bong tróc vảy và thô ráp. Khi da sần sùi thì khá nhạy cảm dễ bị kích ứng hoặc nổi mụn.',
+                ],
+                (object)[
+                    "title" => 'Da khô xỉn màu, thiếu rạng rỡ',
+                    "image" => '/images/assigns/da-kho-xin-mau.webp',
+                    "content" => 'Da xỉn màu là làn da không đều màu, thô ráp, tông màu da bị tối hoặc nhợt nhạt, không được tươi sáng. Ngoài ra, người có da xỉn màu kém sức sống thường có lỗ chân lông da khá to, thậm chí có cả nếp nhăn, sạm nám, đốm đen',
+                ],
+                (object)[
+                    "title" => 'Da có vấn đề về sắc tố',
+                    "image" => '/images/assigns/roi-loan-sac-to-da.jpg',
+                    "content" => 'Tình trạng khiến da bị sạm đen được gọi là chứng tăng sắc tố da. Đó có thể là những mảng nhỏ, bao phủ với khu vực da lớn hoặc có thể ảnh hưởng đến toàn bộ cơ thể. Tăng sắc tố da thường vô hại nhưng đây có thể là triệu chứng của một tình trạng sức khỏe nào đó khác.',
+                ],
+            ],
+            'description' => "Kem dưỡng trắng trị thâm mờ nám là dòng sản phẩm cao cấp trong việc hỗ trợ điều trị các vấn đề về sắc tố, giúp loại bỏ các vùng da tối màu, thâm sạm. đây là sản phẩm vô cùng hiệu quả trong việc ngăn ngừa sự xuất hiện của các vết thâm và hiện tượng da không đều màu. Thành phần chiết xuất tự nhiên an toàn lành tính, bổ sung các dưỡng chất cần thiết cho da, giúp duy trì làn da tươi sáng đầy sức sống",
+        ];
+        $whitening_remove_freckle_cream = (object)[
+            'name' => 'Whitening Remove Freckle Cream',
+            'slug' => 'whitening-remove-freckle-cream',
+            'title' => 'Kem dưỡng sáng da mờ thâm nám tàn nhang',
+            'components' => [
+                (object)[
+                    "name" => ' Squalane',
+                    'title' => 'Squalane được chiết xuất từ gan cá mập hoặc dầu ô
+                                 liu, là thành phần tự nhiên của da, có khả năng
+                                 chống oxy hóa tốt và thúc đẩy miễn dịch, có thể hòa
+                                 tan nhanh cùng với độ ẩm và dầu trong da, tạo
+                                 thành hàng rào bảo vệ da tự nhiên, có độ ổn định
+                                 tốt, không bị oxy hóa bởi không khí, tia cực tím..., có
+                                 thể bảo vệ da hiệu quả khỏi các chất bên ngoài, và
+                                 có khả năng thẩm thấu tốt. Nó có thể điều chỉnh sự
+                                 cân bằng của nước và dầu trên da, ngăn ngừa da
+                                 thô ráp và xỉn màu, đồng thời mang lại sự mềm mại
+                                 ban đầu của da. Đặc biệt thích hợp sử dụng vào
+                                 mùa lạnh, nó là “dầu bôi trơn” cho da và có thể bổ
+                                 sung lượng bã nhờn tự nhiên của da.',
+                    'image' => '/images/components/dau-squalane.jpg'
+                ],
+                (object)[
+                    "name" => 'Chiết xuất rễ nhân sâm',
+                    'title' => 'Nhân sâm được mệnh danh là “vua của các loại thảo dược” và
+                                 hiệu quả về nhiều mặt của nó đang được chứng minh rất nhiều.
+                                 Đối với da, nhân sâm có chứa ginsenosides, có thể thúc đẩy
+                                 tuần hoàn máu, ngăn ngừa lão hóa da và nếp nhăn, tăng cường
+                                 cung cấp dưỡng chất cho da, đóng vai trò bổ khí và nuôi dưỡng
+                                 làn da và thúc đẩy lưu thông máu, đồng thời tăng cường chức
+                                 năng miễn dịch, giúp da không bị kích thích có hại từ môi
+                                 trường bên ngoài. Nó có thể đẩy nhanh quá trình trao đổi chất
+                                 của con người, dưỡng ẩm sâu cho da, ngăn ngừa khô và lão hóa,
+                                 đồng thời điều trị ngứa và lột da hiệu quả, mang lại làn da mặt
+                                 mỏng manh và mịn màng. Mang lại làn da tinh khiết và trắng
+                                 sáng.',
+                    'image' => '/images/components/re-nhan-sam.webp'
+                ],
+                (object)[
+                    "name" => 'Tocopherol (Vitamin E)',
+                    'title' => ' Vitamin E là một chất chống oxy hóa, hòa tan trong chất
+                                 béo, giúp làm sạch các gốc tự do được tạo ra bởi bức xạ
+                                 mặt trời, như tia cực tím và ngăn ngừa tổn thương của
+                                 chúng đối với da. Các gốc tự do có thể oxy hóa tế bào da,
+                                 dẫn đến các vấn đề như lão hóa da, nếp nhăn và đốm nâu.
+                                 Vitamin E có thể trung hòa các chất có hại này và bảo vệ
+                                 tế bào da.',
+                    'image' => '/images/components/tocopherol-acetate.png'
+                ],
+                (object)[
+                    "name" => 'Chiết xuất hoa tuyết liên',
+                    'title' => 'Hoa tuyết liên tự nhiên chứa nhiều flavonatella, olipin,
+                                 polysaccharide.... Chỉ số chống nắng lên đến 22SPF, có thể bảo
+                                 vệ da hiệu quả khỏi tia cực tím, đồng thời có tác dụng chống
+                                 viêm, phục hồi mô và chống gốc tự do superoxide, có ý nghĩa
+                                 tích cực trong việc ngăn ngừa tổn thương tiến triển mãn tính do
+                                 các yếu tố sinh lý hoặc phi sinh lý (chẳng hạn như bệnh tật) gây
+                                 ra. Nó có chức năng giữ ẩm, khử trùng, chống viêm, phát triển
+                                 lớp mô dưới da, chống nắng, làm mềm, làm mịn, làm trắng, loại
+                                 bỏ tàn nhang và chống lão hóa.',
+                    'image' => '/images/components/hoa-tuyet-lien.jpg'
+                ],
+
+            ],
+            'numbers' => [
+                (object)[
+                    'image' =>'images/products/image_1_1.jpg',
+                    'title' => 'Nuôi dưỡng, làm trắng từ sâu bên trong',
+                    'content' => ' Làm mờ các đốm nâu trên da, tấn công chuyên sâu các đốm nâu trên da.'
+                ],
+                (object)[
+                    'image' => 'images/products/image_1_2.jpg',
+                    'title' => 'Giảm sắc tố melanin và giúp làn da trắng sáng. Ngăn ngừa các sắc tố không mong muốn.',
+                    'content' => 'Chứa các thành phần phục hồi từ thực vật, làm giảm các đốm tàn nhang, làm dịu da và dưỡng ẩm'
+                ],
+                (object)[
+                    'image' => 'images/products/image_1_2.jpg',
+                    'title' => 'Giảm sắc tố melanin và giúp làn da trắng sáng. Ngăn ngừa các sắc tố không mong muốn.',
+                    'content' => 'Giảm các đốm tàn nhang và ngăn ngừa tái phát'
+                ],
+            ],
+            'images' => [
+                'images/products/image_1_1.jpg',
+                'images/products/image_1_2.jpg',
+                'images/products/image_1_3.jpg',
+                'images/products/image_1_4.jpg',
+                'images/products/image_1_5.jpg',
+                'images/products/image_1_6.jpg',
+                'images/products/image_1_7.jpg',
+                'images/products/image_1_8.jpg',
+            ],
+            'assigns' => [
+                (object)[
+                    "title" => 'Da sần sùi, lỗ chân lông to',
+                    "image" => '/images/assigns/da-mat-san-sui-lo-chan-long-to.jpg',
+                    "content" => 'Da mặt sần sùi lỗ chân lông to là tình trạng nhiều người gặp phải. Tình trạng này xảy ra khi da mất độ ẩm, bong tróc vảy và thô ráp. Khi da sần sùi thì khá nhạy cảm dễ bị kích ứng hoặc nổi mụn.',
+                ],
+                (object)[
+                    "title" => 'Da khô xỉn màu, thiếu rạng rỡ',
+                    "image" => '/images/assigns/da-kho-xin-mau.webp',
+                    "content" => 'Da xỉn màu là làn da không đều màu, thô ráp, tông màu da bị tối hoặc nhợt nhạt, không được tươi sáng. Ngoài ra, người có da xỉn màu kém sức sống thường có lỗ chân lông da khá to, thậm chí có cả nếp nhăn, sạm nám, đốm đen',
+                ],
+                (object)[
+                    "title" => 'Da có vấn đề về sắc tố',
+                    "image" => '/images/assigns/roi-loan-sac-to-da.jpg',
+                    "content" => 'Tình trạng khiến da bị sạm đen được gọi là chứng tăng sắc tố da. Đó có thể là những mảng nhỏ, bao phủ với khu vực da lớn hoặc có thể ảnh hưởng đến toàn bộ cơ thể. Tăng sắc tố da thường vô hại nhưng đây có thể là triệu chứng của một tình trạng sức khỏe nào đó khác.',
+                ],
+            ],
+            'description' => " Làm mờ các đốm nâu trên da, tấn công chuyên sâu các đốm nâu trên da. Giảm sắc tố melanin và giúp làn da trắng sáng. Ngăn ngừa các sắc tố không mong muốn. Giảm các đốm tàn nhang và ngăn ngừa tái phát.",
+        ];
+
+
+        $relatedProducts = [
+            $repair_anti_aging_cream,
+            $whitening_remove_freckle_cream,
+            $repair_anti_aging_cream,
+            $repair_anti_aging_cream,
+            $repair_anti_aging_cream,
+            $repair_anti_aging_cream
+        ];
+
         $product = [];
         switch ($slug){
             case 'whitening-remove-freckle-cream':
-                $product = (object)[
-                    'name' => 'SHINEX - Whitening Remove Freckle Cream',
-                    'images' => [
-                        'images/products/image_1_1.jpg',
-                        'images/products/image_1_2.jpg',
-                        'images/products/image_1_3.jpg',
-                        'images/products/image_1_4.jpg',
-                        'images/products/image_1_5.jpg',
-                        'images/products/image_1_6.jpg',
-                        'images/products/image_1_7.jpg',
-                        'images/products/image_1_8.jpg',
-                    ],
-                    'description' => "Kem Whitening Remove Freckle Cream ShineX – Kem chống lão hóa chuyên sâu là dòng mỹ phẩm trị liệu cao cấp đến từ thương hiệu ShineX. Công thức độc quyền đẩy nhanh quá trình bóc tách, thay mới lớp tế bào sừng già cỗi, tái phục hồi làn da từ sâu bên trong.  đồng thời làm mờ ngăn chặn sự hình thành của các vết thâm, sạm, nám, xỉn màu  . Làn da sẽ được thay đổi ngoạn mục bất ngờ, đẩy lùi tất cả các dấu hiệu lão hóa và lấy lại làn da tươi trẻ tràn đầy sức sống.",
-                    'content' => '<h3><strong>Th&agrave;nh phần v&agrave; c&ocirc;ng dụng sản phẩm:</strong></h3>
-<p><strong>1. Th&agrave;nh phần ch&iacute;nh:</strong></p>
-<ul>
-<li><strong>Niacinamide</strong>: phức hợp của vtmB3 l&agrave; hoạt chất c&oacute; t&aacute;c dụng điều trị c&aacute;c vấn đề về l&atilde;o h&oacute;a. Hoạt động l&agrave;m giảm sự sản sinh của melanin từ đ&oacute; c&oacute; thể hỗ trợ ngăn chặn h&igrave;nh th&agrave;nh c&aacute;c vết th&acirc;m, sạm da hiệu quả. Chống oxy h&oacute;a, duy tr&igrave; độ ẩm v&agrave; tang sinh ceramide gi&uacute;p củng cổ h&agrave;ng r&agrave;o bảo vệ tự nhi&ecirc;n tr&ecirc;n da. l&agrave;m giảm tho&aacute;t nước l&ecirc;n đến 24%. Từ đ&oacute; Điều tiết b&atilde; nhờn&nbsp; khiến lỗ ch&acirc;n l&ocirc;ng trở n&ecirc;n th&ocirc;ng tho&aacute;ng hơn.</li>
-<li><strong>Ascobic acid:</strong> Vtm C dạng ổn định gi&uacute;p chống lại qu&aacute; tr&igrave;nh oxy h&oacute;a tự nhi&ecirc;n mạnh mẽ. Ngăn chặn v&agrave; l&agrave;m giảm sự h&igrave;nh th&agrave;nh c&aacute;c vết th&acirc;m sạm, n&aacute;m. Bảo vệ da trước c&aacute;c t&aacute;c nh&acirc;n g&acirc;y hại ngo&agrave;i m&ocirc;i trường. L&agrave;n da s&aacute;ng khỏe v&agrave; đồng đ&ecirc;u m&agrave;u.</li>
-<li><strong>Glycyrrhiza Glabra (Licorice) Root Extract:</strong> l&agrave; chiết xuất từ rễ c&acirc;y cam thảo được sử dụng rất phổ biến trong c&aacute;c b&agrave;i thuốc Đ&ocirc;ng Y, c&oacute; chứa glabridin &ndash; c&oacute; đặc t&iacute;nh l&agrave;m s&aacute;ng da, c&oacute; t&aacute;c dụng ức chế sản sinh melanin tương đương hydroquinone nhưng an to&agrave;n v&agrave; hiệu quả hơn rất nhiều. Glabridin c&ograve;n l&agrave; chất chống oxy h&oacute;a v&agrave; chống vi&ecirc;m ngo&agrave;i ra hỗ trợ l&agrave;m dịu, l&agrave;m l&agrave;nh c&aacute;c vết thương nhanh ch&oacute;ng.</li>
-<li><strong>Chiết xuất rễ c&acirc;y mẫu đơn: </strong>chống oxy h&oacute;a v&agrave; bảo vệ da khỏi c&aacute;c gốc tự do.</li>
-</ul>
-<p><strong>2. C&ocirc;ng dụng ch&iacute;nh:</strong></p>
-<ul>
-<li>L&agrave;m s&aacute;ng da, l&agrave;m mờ v&agrave; ngăn ngừa vết th&acirc;m, n&aacute;m mảng, t&agrave;n nh&agrave;ng.</li>
-<li>Thay mới, t&aacute;i tạo v&agrave; trẻ h&oacute;a l&agrave;n da đang gặp c&aacute;c t&igrave;nh trạng th&ocirc;, sần, lỗ ch&acirc;n l&ocirc;ng to.</li>
-<li>Điều chỉnh c&aacute;c sắc tố v&agrave; ngăn ngừa c&aacute;c đốm n&acirc;u mới h&igrave;nh th&agrave;nh</li>
-</ul>
-<p><strong>3. Chỉ định</strong></p>
-<ul>
-<li>Da sần s&ugrave;i, lỗ ch&acirc;n l&ocirc;ng to</li>
-<li>Da kh&ocirc; xỉn m&agrave;u, thiếu rạng rỡ</li>
-<li>Da c&oacute; vấn đề về sắc tố</li>
-</ul>
-<p><strong>4. C&aacute;ch d&ugrave;ng:</strong></p>
-<p>Thoa đều sản phẩm sau khi l&agrave;m sạch da v&agrave;o buổi tối, tr&aacute;nh v&ugrave;ng mắt, m&aacute;t xa đến khi sản phẩm được thẩm thấu ho&agrave;n to&agrave;n.</p>'
-                ];
+                $product = $whitening_remove_freckle_cream;
                 break;
             case 'repair-anti-aging-cream':
-                $product = (object)[
-                    'name' => 'SHINEX - Repair Anti-Aging Cream',
-                    'images' => [
-                        'images/products/image_1_1.jpg',
-                        'images/products/image_1_2.jpg',
-                        'images/products/image_1_3.jpg',
-                        'images/products/image_1_4.jpg',
-                        'images/products/image_1_5.jpg',
-                        'images/products/image_1_6.jpg',
-                        'images/products/image_1_7.jpg',
-                        'images/products/image_1_8.jpg',
-                    ],
-                    'description' => "Kem dưỡng trắng trị thâm mờ nám là dòng sản phẩm cao cấp trong việc hỗ trợ điều trị các vấn đề về sắc tố, giúp loại bỏ các vùng da tối màu, thâm sạm. đây là sản phẩm vô cùng hiệu quả trong việc ngăn ngừa sự xuất hiện của các vết thâm và hiện tượng da không đều màu. Thành phần chiết xuất tự nhiên an toàn lành tính, bổ sung các dưỡng chất cần thiết cho da, giúp duy trì làn da tươi sáng đầy sức sống",
-                    'content' => '<h3><strong>Th&agrave;nh phần v&agrave; c&ocirc;ng dụng sản phẩm:</strong></h3>
-<p><strong>1. Th&agrave;nh phần ch&iacute;nh:</strong></p>
-<ul>
-<li>
-<p><strong>PALMITIC ACID:</strong> l&agrave; 1 acid b&eacute;o tự nhi&ecirc;n c&oacute; tr&ecirc;n da gi&uacute;p giữ ẩm v&agrave; củng cố h&agrave;ng r&agrave;o bảo vệ da.</p>
-</li>
-<li>
-<p><strong>Glycolic </strong>l&agrave; một alpha hydroxy acid (AHA) được sử dụng rộng r&atilde;i để&nbsp;chống l&atilde;o h&oacute;a, tăng sắc tố, kh&ocirc; da v&agrave; mụn trứng c&aacute;. Được coi l&agrave; ti&ecirc;u chuẩn v&agrave;ng của AHA, đặc t&iacute;nh ti&ecirc;u sừng của glycolic acid gi&uacute;p tẩy tế b&agrave;o chết tr&ecirc;n bề mặt da, l&agrave;m giảm c&aacute;c nếp nhăn &ndash; r&atilde;nh nhăn hiện c&oacute;, l&agrave;m mờ vết th&acirc;m n&aacute;m v&agrave; x&oacute;a mụn.</p>
-</li>
-<li>
-<p><strong>HYDROXYPHENYL PROPAMIDOBENZOIC ACID: </strong>l&agrave;m dịu kh&aacute;ng vi&ecirc;m, chống k&iacute;ch ứng. ( c&oacute; khả năng &nbsp;tương tự như&nbsp;<a href="https://en.wikipedia.org/wiki/Avenanthramide">Avenanthraimide</a>&nbsp;c&oacute; tự nhi&ecirc;n trong yến mạch)</p>
-</li>
-<li>
-<p><strong>Th&agrave;nh phần Glycyrrhetinic Acid</strong>( chiết xuất c&acirc;y cam thảo) c&oacute; c&ocirc;ng dụng l&agrave;m giảm kh&ocirc; da, bong tr&oacute;c da. Đồng thời c&oacute; thể nu&ocirc;i dưỡng v&agrave;&nbsp;<a href="https://nhathuoclongchau.com.vn/bai-viet/meo-phuc-hoi-da-bi-hu-ton-tai-nha-nhanh-chong-hieu-qua-48564.html">phục hồi da hư tổn</a>. C&ograve;n c&oacute; thể l&agrave;m trắng da, thiết lập lại cấu tr&uacute;c da bị tổn thương. V&igrave; vậy gi&uacute;p da tr&ocirc;ng trẻ hơn v&agrave; đ&agrave;n hồi tốt hơn.</p>
-</li>
-</ul>
-<p><strong>2. C&ocirc;ng dụng ch&iacute;nh:</strong></p>
-<ul>
-<li>
-<p>Th&uacute;c đẩy qu&aacute; tr&igrave;nh trao đổi chất của l&agrave;n da 1 c&aacute;ch mạnh mẽ.</p>
-</li>
-<li>
-<p>L&agrave;m chậm qu&aacute; tr&igrave;nh l&atilde;o h&oacute;a, chống lại sự xuất hiện của c&aacute;c nếp nhăn.</p>
-</li>
-<li>
-<p>Nu&ocirc;i dưỡng v&agrave; l&agrave;m s&aacute;ng đồng đều l&agrave;n da.</p>
-</li>
-</ul>
-<p><strong>3. Chỉ định</strong></p>
-<ul>
-<li>Da sần s&ugrave;i, lỗ ch&acirc;n l&ocirc;ng to</li>
-<li>Da kh&ocirc; xỉn m&agrave;u, thiếu rạng rỡ</li>
-<li>Da c&oacute; vấn đề về sắc tố</li>
-</ul>
-<p><strong>4. C&aacute;ch d&ugrave;ng:</strong></p>
-<p>Thoa đều sản phẩm sau khi l&agrave;m sạch da v&agrave;o buổi tối, tr&aacute;nh v&ugrave;ng mắt, m&aacute;t xa đến khi sản phẩm được thẩm thấu ho&agrave;n to&agrave;n.</p>'];
+                $product = $repair_anti_aging_cream;
                 break;
             case 'soothing-balance-repair-cream':
                 $product = (object)[
-                    'name' => 'SHINEX - Soothing balance repair cream',
+                    'name' => 'Soothing balance repair cream',
                     'images' => [
                         'images/products/image_1_1.jpg',
                         'images/products/image_1_2.jpg',
@@ -160,7 +298,7 @@ class ProductController extends Controller
                 break;
             case 'soothing-and-restoring-essential-oils':
                 $product = (object)[
-                    'name' => 'SHINEX - Serum smoothing and restoring essential oils',
+                    'name' => 'Serum smoothing and restoring essential oils',
                     'images' => [
                         'images/products/image_1_1.jpg',
                         'images/products/image_1_2.jpg',
@@ -318,6 +456,6 @@ class ProductController extends Controller
                 return view('front.content.notFound');
                 break;
         }
-        return view('front.content.product.productDetail',['product' => $product, 'page' =>  'product-detail']);
+        return view('front.content.product.productDetail',['product' => $product, 'relatedProducts' =>  $relatedProducts]);
     }
 }

@@ -2,6 +2,16 @@
 @section('title')
     {{$product->name}}
 @endsection
+@section('seo')
+    <meta name="title" content="{{$product->name}} | Shinex">
+    <meta name="keywords" content="{{$product->name}}, Shinex, mỹ phẩm, kem bôi, kem dưỡng da, kem làm trắng da, mỹ phẩm chất lượng cao, chăm sóc da, phục hồi da, chăm sóc sắc đẹp, mỹ phẩm làm đẹp">
+    <meta name="description" content="{{$product->description}}">
+
+    <meta name="og:title" content="{{$product->name}} | Shinex">
+    <meta name="og:keywords" content="{{$product->name}}, Shinex, mỹ phẩm, kem bôi, kem dưỡng da, kem làm trắng da, mỹ phẩm chất lượng cao, chăm sóc da, phục hồi da, chăm sóc sắc đẹp, mỹ phẩm làm đẹp">
+    <meta name="og:description" content="{{$product->description}}">
+@endsection
+
 @section('content')
     <div class="container mx-auto px-2 xl:px-36 text-lg">
         <div class="w-full py-16 md:py-20">

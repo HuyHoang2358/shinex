@@ -14,7 +14,8 @@ export default {
             'main-color': '#D0002D'
         },
         backgroundImage:{
-            'footer-bg':"url('/)"
+            'footer-bg':"url('/)",
+            'contact_1': "url('../public/images/background/contact1.jpg')",
         }
     },
   },

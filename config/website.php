@@ -2,8 +2,8 @@
 
 return [
     "webName" => "Shinex",
-    "hotline" => "0852122122",
-    "hotlinehome" => "0905663511",
+    "hotline" => "(+84) 52 122 122",
+    "hotlinehome" => "(+84) 905 663 511",
     "email" => "contact.fishgolden@gmail.com",
     "slogan" => "Các cách chăm sóc da mà không giải quyết được vấn đề về da đều vô nghĩa.",
     "logo"  => "/images/logo/logo.png",

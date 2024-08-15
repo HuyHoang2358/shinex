@@ -13,7 +13,25 @@
     @yield('head')
 
     @vite(['resources/css/app.css','resources/js/app.js'])
+    <meta name="resource-type" content="Document">
+    <meta name="distribution" content="Global">
+    <meta name="revisit-after" content="1 days">
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
+    <meta name="author" content="{{Config::get('website.author')}}">
+    <meta name="copyright" content="{{Config::get('website.author')}}">
+    <meta name="GENERATOR" content="{{Config::get('website.author')}}">
+
+    <meta property="og:site_name" content="{{url('/')}}">
+    <meta property="og:url" content="{{url('/')}}">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="vi_VN">
+
+    <meta property="og:url" content="{{url()->current()}}">
+    @yield('seo')
 </head>
 <body>
     <div class="container mx-auto">

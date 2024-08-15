@@ -1,6 +1,7 @@
 <?php
 
 return [
+    "author" => "Viện Thẩm Mỹ Quốc Tế Jolly",
     "webName" => "Shinex",
     "hotline" => "(+84) 52 122 122",
     "hotlinehome" => "(+84) 905 663 511",

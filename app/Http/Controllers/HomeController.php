@@ -11,7 +11,7 @@ class HomeController extends Controller
     public function index(): View|Application|Factory
     {
         // trang chủ
-        return view('homepage');
+        return view('homepage', ['page'=>'homepage']);
     }
 
     public function gallery(): View|Application|Factory
@@ -22,7 +22,7 @@ class HomeController extends Controller
 
     public function contact(): View|Application|Factory
     {
-        return view('front.content.contact');
+        return view('front.content.contact',['page'=>'contact']);
     }
 
 

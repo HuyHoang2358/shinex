@@ -20,12 +20,8 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::get('/gallery', [App\Http\Controllers\HomeController::class, 'gallery'])->name('gallery');  // shinex.th/gallery
 Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact'); // shinex.th/contact
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about'); // shinex.th/about
-Route::get('/cart', [App\Http\Controllers\HomeController::class, 'cart'])->name('cart'); // shinex.th/about
+Route::get('/cart', [App\Http\Controllers\HomeController::class, 'cart'])->name('cart'); // shinex.th/cart
 
-/*
-Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['auth:admin']], function () {
-    \UniSharp\LaravelFilemanager\Lfm::routes();
-});*/
 
 
 Route::middleware('guest:admin')->prefix('admin')->group( function () {

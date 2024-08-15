@@ -321,7 +321,7 @@ class ProductController extends Controller
         ];
 
         $soothing_and_restoring_essential_oils = (object)[
-            'name' => 'Smoothing and restoring essential oils',
+            'name' => 'Soothing and restoring essential oils',
             'slug' => 'soothing-and-restoring-essential-oils',
             'title' => 'Tinh dầu làm dịu và phục hồi da',
             'components' => [
@@ -542,28 +542,26 @@ class ProductController extends Controller
         ],
         'numbers' => [
             (object)[
-                'image' =>'images/products/polypeptide-heal-damaged-skin-ice-crystal/2.jpg',
+                'image' =>'images/products/polypeptide-heal-damaged-skin-ice-crystal/6.jpg',
                 'title' => 'Chăm sóc toàn diện cho làn da',
                 'content' => 'Loại bỏ tình trạng ngứa ran, mẩn đỏ, khô, ngứa, rát da. Chăm sóc toàn diện cho làn da bị tổn thương.'
             ],
             (object)[
-                'image' => 'images/products/polypeptide-heal-damaged-skin-ice-crystal/3.jpg',
+                'image' => 'images/products/polypeptide-heal-damaged-skin-ice-crystal/5.jpg',
                 'title' => 'Phục hồi da sau các can thiệp phẫu thuật',
                 'content' => ' Làm dịu da, giảm tình trạng đỏ sau khi tiếp xúc với ánh nắng mặt trời. Phục hồi da sau khi xăm hoặc có vết thương.  ',
             ],
             (object)[
-                'image' => 'images/products/polypeptide-heal-damaged-skin-ice-crystal/4.jpg',
+                "image" => 'images/products/polypeptide-heal-damaged-skin-ice-crystal/1.jpg',
                 'title' => 'Bổ sung dưỡng chất',
                 'content' => 'Bổ sung keratin, làm dày da, cải thiện tình trạng da mỏng lộ mao mạch. Nuôi dưỡng và phục hồi mô dưới da'
             ],
         ],
         'images' => [
             'images/products/polypeptide-heal-damaged-skin-ice-crystal/1.jpg',
-            'images/products/polypeptide-heal-damaged-skin-ice-crystal/2.jpg',
-            'images/products/polypeptide-heal-damaged-skin-ice-crystal/3.jpg',
-            'images/products/polypeptide-heal-damaged-skin-ice-crystal/4.jpg',
             'images/products/polypeptide-heal-damaged-skin-ice-crystal/5.jpg',
             'images/products/polypeptide-heal-damaged-skin-ice-crystal/6.jpg',
+            'images/products/polypeptide-heal-damaged-skin-ice-crystal/9.jpg',
         ],
         'assigns' => [
             (object)[
@@ -618,6 +616,6 @@ class ProductController extends Controller
                 return view('front.content.notFound');
                 break;
         }
-        return view('front.content.product.productDetail',['product' => $product, 'relatedProducts' =>  $relatedProducts]);
+        return view('front.content.product.productDetail',['product' => $product, 'relatedProducts' =>  $relatedProducts, 'page' => 'product']);
     }
 }

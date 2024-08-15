@@ -1,4 +1,4 @@
-@extends('layouts.mainLayout')
+@extends('layouts.newLayout')
 @section('subTitle')
     Giới thiệu |
 @endsection

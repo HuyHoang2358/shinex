@@ -4,7 +4,7 @@
 @endsection
 @section('content')
     <div class="container mx-auto xl:px-36 text-lg">
-        <div class="w-full py-16">
+        <div class="w-full py-20">
             <!-- BreadCrumb -->
             @include('partial.component_Breadcrumb', ["routeName" => 'product.detail', "breadcrumb" => (object)['name' => $product->name, 'slug' => $product->slug] ])
 
@@ -18,7 +18,7 @@
                                 <!-- Item 1 -->
                                 @foreach($product->images as $image)
                                     <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                                        <img src="{{asset($image)}}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                                        <img src="{{asset($image)}}" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                                     </div>
                                 @endforeach
                             </div>
@@ -27,7 +27,7 @@
                                 @foreach($product->images as $image)
                                     <button type="button" aria-current="true" aria-label="Slide {{$loop->index}}" data-carousel-slide-to="{{$loop->index}}"
                                             class="shadow border border-gray-300 rounded-lg hover:border-blue-500">
-                                        <img src="{{asset($image)}}" class="w-full  rounded-lg " alt="product-image">
+                                        <img src="{{asset($image)}}" class="w-full  h-full rounded-lg " alt="product-image">
                                     </button>
                                 @endforeach
                             </div>
@@ -35,25 +35,12 @@
                     </div>
 
                 </div>
-               {{-- <div class="col-span-1"></div>--}}
                 <div class="col-span-3">
                     <h3 class="font-semibold text-lg text-blue-400">Tắm & Dưỡng Thể - Tẩy Da Chết</h3>
 
                     <h1 class="font-medium text-3xl my-2">{{$product->name}}</h1>
                     <h2 class="font-semibold text-xl text-gray-400">{{$product->title}}</h2>
                     <p class="text- base pt-3 pb-5 opacity-85">{{$product->description}}</p>
-
-                   {{-- <div class="flex flex-wrap py-3 border-y-[1px] border-black text-xs">
-                        <div class="flex items-center gap-2 pr-5">
-                            <img class="w-20 h-20" src="{{asset('/images/logo/quality')}}" alt="">
-                        </div>
-                        <div class="flex items-center gap-2 pr-5">
-                            <img class="w-24 h-20" src="{{asset('/images/logo/heal.png')}}" alt="">
-                        </div>
-                        <div class="flex items-center gap-2 pr-5">
-                            <img class="w-24 h-20" src="{{asset('/images/logo/nature.png')}}" alt="">
-                        </div>
-                    </div>--}}
 
                     <div class="text-base py-5">
                         <div class="border-b-[1px] border-gray-300 pb-5">
@@ -65,7 +52,7 @@
                             <div class="flex justify-start items-center gap-4 mt-4">
                                 @foreach($product->components as $component)
                                     <div class="w-28 h-28 rounded-lg shadow">
-                                        <img src="{{$component->image}}" alt="{{$component->name}}" class="w-full h-full rounded-lg">
+                                        <img src="{{asset($component->image)}}" alt="{{$component->name}}" class="w-full h-full rounded-lg">
                                     </div>
                                 @endforeach
                             </div>
@@ -206,11 +193,11 @@
                 <h3 class="text-xl font-semibold text-blue-800 leading-10 py-4"><span class="font-normal text-blue-600">SẢN PHẨM NÀO</span><br>
                     PHÙ HỢP VỚI BẠN?
                 </h3>
-                <div class="flex gap-8">
+                <div class="grid grid-cols-6 gap-6">
                     @foreach($relatedProducts as $item)
                         <div>
                             <div class="hover:box-border">
-                                <img class="hover:scale-110 ease-in-out duration-300 h-56 w-full rounded-lg" src="{{asset('/ImgProduct/9.jpg')}}" alt="">
+                                <img class="hover:scale-110 ease-in-out duration-300 h-56 w-full rounded-lg" src="{{asset($item->images[0])}}" alt="">
                             </div>
                             <div class="py-2">
                                 <h4 class="font-semibold text-lg"><a href="{{route('product.detail', $item->slug)}}">{{$item->name}}</a></h4>

@@ -16,14 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
-Route::get('/gallery', [App\Http\Controllers\HomeController::class, 'gallery'])->name('gallery');
-Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
-Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
-/*
-Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['auth:admin']], function () {
-    \UniSharp\LaravelFilemanager\Lfm::routes();
-});*/
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('homepage'); // Trang chủ shinex.th
+Route::get('/gallery', [App\Http\Controllers\HomeController::class, 'gallery'])->name('gallery');  // shinex.th/gallery
+Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact'); // shinex.th/contact
+Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about'); // shinex.th/about
+Route::get('/cart', [App\Http\Controllers\HomeController::class, 'cart'])->name('cart'); // shinex.th/cart
+
 
 
 Route::middleware('guest:admin')->prefix('admin')->group( function () {
@@ -58,4 +56,6 @@ Route::middleware('auth:admin')->prefix('admin')->group( function () {
 
 
 Auth::routes();
-Route::get('/{slug}',[ProductController::class, 'detail'])->name('product.detail');
+// Xem thông tin chi tiết từng sản phẩm
+Route::get('/{slug}',[ProductController::class, 'detail'])->name('product.detail'); // shinex.th/{slug}
+

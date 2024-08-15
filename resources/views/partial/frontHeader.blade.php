@@ -1,77 +1,39 @@
-<header style="display: block">
-    <div class="container-fluid">
-        <div class="header d-md-flex justify-content-between align-items-center py-3 px-xl-5 px-lg-3 px-2" >
-            <!-- logo -->
-            <div id="logo">
-                <div class="row">
-                    <h1><a class="" href="{{url('/')}}">{{Config::get('website.webName')}}</a></h1>
-                </div>
-                <div class="row">
-                    <h4 style="color:white">The next to shine is you</h4>
-                </div>
-               {{-- <img src="{{asset('images/logo/logo.png')}}" alt="shinex-logo" class="h-25"/>--}}
-            </div>
-            <!-- //logo -->
-            <!-- nav -->
-            <div class="nav_w3ls">
-                <nav>
-                    <label for="drop" class="toggle">Danh mục</label>
-                    <input type="checkbox" id="drop" />
-                    <ul class="menu">
-                        <li>
-                            @if($page == 'homepage' )
-                                <a href="{{url('/')}}" class="active">Trang chủ</a>
-                            @else
-                                <a href="{{url('/')}}">Trang chủ</a>
-                            @endif
+<div class="xl:px-36 py-3 flex justify-between items-center shadow fixed w-full z-50 bg-white">
+    <a href="{{route('homepage')}}">
+        <img class="w-48" src="{{asset('/images/shinex/logo-jolly.png')}}" alt="shinex-logo">
+    </a>
+    <div>
+        <div class="flex gap-10 text-base font-serif">
+            <a class="{{$page == 'homepage' ? 'font-bold text-blue-400' : ''}}" href="{{route('homepage')}}">TRANG CHỦ</a>
+            <a class="{{$page == 'contact' ? 'font-bold text-blue-400' : ''}}" href="#">LIÊN HỆ</a>
+            <a class="{{$page == 'about' ? 'font-bold text-blue-400' : ''}}" href="#">VỀ CHÚNG TÔI</a>
+            <div class="group/item relative">
+                <button type="button" class="{{$page == 'product' ? 'font-bold text-blue-400' : ''}}" >SẢN PHẨM <i class="fa-solid fa-angles-down pl-1"></i></button>
+                <div class="group-hover/item:block hidden absolute z-50 bg-blue-400 w-[170%] rounded-md">
+                    <ul class="text-white p-2 text-sm">
+                        <li class="px-3 py-2 my-2 hover:bg-white hover:text-gray-700 rounded-md duration-300 ease-in-out">
+                            <a href="{{route('product.detail', 'whitening-remove-freckle-cream')}}">  Whitening Remove Freckle Cream </a>
                         </li>
-                        <li class="mx-lg-4 mx-md-3 my-md-0 my-2">
-                            @if($page == 'about' )
-                                <a href="{{url('/about')}}" class="active">Về chúng tôi</a>
-                            @else
-                                <a href="{{url('/about')}}">Về chúng tôi</a>
-                            @endif
+                        <li class="px-3 py-2 my-2 hover:bg-white hover:text-gray-700 rounded-md duration-300 ease-in-out">
+                            <a href="{{route('product.detail', 'repair-anti-aging-cream')}}"> Repair Anti-Aging Cream</a>
                         </li>
-                        <li>
-                            @if($page == 'gallery' )
-                                <a href="{{url('/gallery')}}" class="active">Bộ sưu tập</a>
-                            @else
-                                <a href="{{url('/gallery')}}">Bộ sưu tập</a>
-                            @endif
-
-
-
+                        <li class="px-3 py-2 my-2 hover:bg-white hover:text-gray-700 rounded-md duration-300 ease-in-out">
+                            <a href="{{route('product.detail', 'soothing-balance-repair-cream')}}"> Soothing balance repair cream </a>
                         </li>
-                        <li class="mx-lg-4 mx-md-3 my-md-0 my-2">
-                            <!-- First Tier Drop Down -->
-                            <label for="drop-2" class="toggle toogle-2">Sản phẩm <span class="fa fa-angle-down" aria-hidden="true"></span>
-                            </label>
-                            @if($page == 'product-detail')
-                                <a href="#" class="active">Sản phẩm <span class="fa fa-angle-down" aria-hidden="true"></span></a>
-                            @else
-                                <a href="#" >Sản phẩm <span class="fa fa-angle-down" aria-hidden="true"></span></a>
-                            @endif
-                            <input type="checkbox" id="drop-2" />
-                            <ul>
-                                <li><a href="{{url('/whitening-remove-freckle-cream')}}" class="drop-text">Whitening Remove Freckle Cream</a></li>
-                                <li><a href="{{url('/repair-anti-aging-cream')}}" class="drop-text">Repair Anti-Aging Cream</a></li>
-                                <li><a href="{{url('/soothing-balance-repair-cream')}}" class="drop-text">Soothing balance repair cream</a></li>
-                                <li><a href="{{url('/soothing-and-restoring-essential-oils')}}" class="drop-text">Serum smoothing and restoring essential oils</a></li>
-                                <li><a href="{{url('/repairing-active-white-serum')}}" class="drop-text">Repairing active white serum</a></li>
-                                <li><a href="{{url('/polypeptide-heal-damaged-skin-ice-crystal')}}" class="drop-text">Polypeptide</a></li>
-                            </ul>
+                        <li class="px-3 py-2 my-2 hover:bg-white hover:text-gray-700 rounded-md duration-300 ease-in-out">
+                            <a href="{{route('product.detail', 'soothing-and-restoring-essential-oils')}}"> Serum smoothing and restoring essential oils </a>
                         </li>
-                        <li>
-                            @if($page == 'contact' )
-                                <a href="{{url('/contact')}}" class="active">Liên hệ</a>
-                            @else
-                                <a href="{{url('/contact')}}">Liên hệ</a>
-                            @endif
+                        <li class="px-3 py-2 my-2 hover:bg-white hover:text-gray-700 rounded-md duration-300 ease-in-out">
+                            <a href="{{route('product.detail', 'repairing-active-white-serum')}}"> Repairing active white serum </a>
+                        </li>
+                        <li class="px-3 py-2 my-2 hover:bg-white hover:text-gray-700 rounded-md duration-300 ease-in-out">
+                            <a href="{{route('product.detail', 'polypeptide-heal-damaged-skin-ice-crystal')}}">  Polypeptide </a>
                         </li>
                     </ul>
-                </nav>
+                </div>
             </div>
-            <!-- //nav -->
         </div>
     </div>
-</header>
+</div>
+
+

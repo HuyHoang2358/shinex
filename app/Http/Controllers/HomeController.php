@@ -10,23 +10,25 @@ class HomeController extends Controller
 
     public function index(): View|Application|Factory
     {
-        return view('homepage', ["page"=>'homepage']);
+        // trang chủ
+        return view('homepage', ['page'=>'homepage']);
     }
 
     public function gallery(): View|Application|Factory
     {
+        // views/front.content.gallery.blade.php
         return view('front.content.gallery', ["page"=>'gallery']);
     }
 
     public function contact(): View|Application|Factory
     {
-        return view('front.content.contact', ["page"=>'contact']);
+        return view('front.content.contact',['page'=>'contact']);
     }
+
+
     public function about(): View|Application|Factory
     {
         return view('front.content.about', ["page"=>'about']);
     }
-
-
 
 }

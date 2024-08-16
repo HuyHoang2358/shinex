@@ -74,7 +74,7 @@
                     <h4 class="py-3 text-base font-bold text-black tracking-wider">HỖ TRỢ KHÁCH HÀNG</h4>
                     <ul class="pl-6 text-base text-gray-600 font-semibold ">
                         <li class="flex items-center gap-3 py-1"><a href="{{url('/')}}" class="hover:text-blue-600">Trang chủ</a></li>
-                        <li class="flex items-center gap-3 py-1"><a href="{{route('about')}}" class="hover:text-blue-600">Giới thiệu</a></li>
+                        <li class="flex items-center gap-3 py-1"><a href="{{url('/')}}" class="hover:text-blue-600">Giới thiệu</a></li>
                         <li class="flex items-center gap-3 py-1"><a href="#" class="hover:text-blue-600">Tin tức</a></li>
                         <li class="flex items-center gap-3 py-1"><a href="{{route('contact')}}" class="hover:text-blue-600">Liên hệ</a></li>
                         <li class="flex items-center gap-3 py-1"><a href="#" class="hover:text-blue-600">Sản phẩm</a></li>

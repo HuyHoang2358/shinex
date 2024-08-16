@@ -1,6 +1,7 @@
-<div class="lg:px-36 shadow fixed w-full z-50 bg-white">
-    <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2.5">
+<div class="shadow fixed z-50 w-full">
+    <div class="container mx-auto lg:px-36 ">
+    <nav class="w-full bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+        <div class="flex flex-wrap items-center justify-between mx-auto px-4 py-2.5">
             <a href="{{url('/')}}" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="{{asset('/images/logo/logo.png')}}" class="h-10" alt="shinex-logo" />
             </a>
@@ -58,6 +59,7 @@
             </div>
         </div>
     </nav>
+    </div>
 </div>
 
 

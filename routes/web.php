@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 // Route trang chủ http://shinex.th/
-Route::get('/', [HomeController::class, 'index'])->name('  homepage');
+Route::get('/', [HomeController::class, 'index'])->name('homepage');
 
 // Route trang giới thiệu http://shinex.th/gioi-thieu
 Route::get('/gioi-thieu', [HomeController::class, 'about'])->name('about');

@@ -10,6 +10,11 @@ use Illuminate\Contracts\View\Factory;
 
 class ProductController extends Controller
 {
+    // Trả về danh sách các sản phẩm
+    public function index(){
+
+    }
+
     public function detail($slug): View|Application|Factory
     {
         $repair_anti_aging_cream = (object)[

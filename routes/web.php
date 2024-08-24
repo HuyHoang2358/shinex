@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\Admin\AdminProductController;
 use App\Http\Controllers\Front\ProductController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -10,52 +12,36 @@ use Illuminate\Support\Facades\Route;
 | Web Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
+| Dưới đây là các route dùng cho trang giao diện người dùng
 |
 */
-
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('homepage'); // Trang chủ shinex.th
-Route::get('/gallery', [App\Http\Controllers\HomeController::class, 'gallery'])->name('gallery');  // shinex.th/gallery
-Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact'); // shinex.th/contact
-Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about'); // shinex.th/about
-Route::get('/cart', [App\Http\Controllers\HomeController::class, 'cart'])->name('cart'); // shinex.th/cart
-
-
-
-Route::middleware('guest:admin')->prefix('admin')->group( function () {
-
-    Route::get('login', [App\Http\Controllers\Auth\Admin\LoginController::class, 'create'])->name('admin.login');
-    Route::post('login', [App\Http\Controllers\Auth\Admin\LoginController::class, 'store'])->name('admin.login.post');
-
-    Route::get('register', [App\Http\Controllers\Auth\Admin\RegisterController::class, 'create'])->name('admin.register');
-    Route::post('register', [App\Http\Controllers\Auth\Admin\RegisterController::class, 'store'])->name('admin.register.post');
-
-});
-
-Route::middleware('auth:admin')->prefix('admin')->group( function () {
-    Route::post('logout', [App\Http\Controllers\Auth\Admin\LoginController::class, 'destroy'])->name('admin.logout');
-    Route::view('/dashboard','admin.dashboard');
-    Route::get('/',[App\Http\Controllers\Admin\AdminHomeController::class, 'homepage'])->name('admin.homepage');
-    Route::get('/file-manager',[App\Http\Controllers\Admin\AdminHomeController::class, 'fileManager'])->name('admin.file-manager');
-
-    // Product manager
-    Route::group(['prefix'=>'product'],function() {
-        Route::get('/', [AdminProductController::class,'index'])->name('admin.product.index');
-        //Route::get('/add', [AdminProductController::class,'add'])->name('admin.product.add');
-        Route::post('/add', [AdminProductController::class,'store'])->name('admin.product.store');
-        //Route::get('/edit/{id}', [AdminProductController::class,'edit'])->name('admin.product.edit');
-        Route::post('/edit/{id}', [AdminProductController::class,'update'])->name('admin.product.update');
-        Route::post('/delete/{id}', [AdminProductController::class,'destroy'])->name('admin.product.delete');
-    });
-});
-
-
-
-
-
+// Route dành cho login, logout, register của trang giao diên người dùng
 Auth::routes();
-// Xem thông tin chi tiết từng sản phẩm
-Route::get('/{slug}',[ProductController::class, 'detail'])->name('product.detail'); // shinex.th/{slug}
+
+// Route trang chủ http://shinex.th/
+Route::get('/', [HomeController::class, 'index'])->name('  homepage');
+
+// Route trang giới thiệu http://shinex.th/gioi-thieu
+Route::get('/gioi-thieu', [HomeController::class, 'about'])->name('about');
+
+
+// Route trang liên hệ http://shinex.th/lien-he
+Route::get('/lien-he', [HomeController::class, 'contact'])->name('contact');
+
+
+// Xem thông tin bài viết
+Route::get('/tin-tuc',[PostController::class, 'index'])->name('post.index');
+Route::get('/bai-viet/{slug}',[PostController::class, 'detail'])->name('post.detail');
+
+
+
+// Route trang danh sách sản phẩm http://shinex.th/san-pham
+Route::get('/san-pham', [ProductController::class, 'index'])->name('product.list');
+
+// Xem thông tin chi tiết từng sản phẩm // shinex.th/{slug}
+// slug là biến truyền vào trong product để lấy thông tin sản phẩm ra
+Route::get('/{slug}',[ProductController::class, 'detail'])->name('product.detail');
+
+
+
 

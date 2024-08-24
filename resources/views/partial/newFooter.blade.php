@@ -1,32 +1,6 @@
 <!-- footer -->
 <div class="container mx-auto xl:px-36 bg-white flex justify-between items-center py-12 pt-52">
     <div class="w-full">
-        <!-- grid -cols- 3 -->
-            <!-- col-1 logo+ address-->
-                <!-- img logo-->
-                <!-- ul -->
-                    <!-- li -->
-                        <!-- a justify-start gap-4 -->
-                            <!-- i lấy trên mạng-->
-                            <!-- p -->
-
-            <!-- col-1 category-->
-                <!-- grid cols-2 -->
-                    <!-- col-1 -->
-                        <!-- ul -->
-                            <!-- li -->
-                                <!-- a -->
-                    <!-- col-1 -->
-                        <!-- ul -->
-                            <!-- li -->
-                                <!-- a -->
-            <!-- col-1 info more -->
-                <!-- mail -->
-                    <!-- input -->
-                    <!-- button -->
-                <!-- list icon -->
-                <!-- name company -->
-
         <div class="grid grid-cols-3">
             <div class="col-span-1 pr-12">
                 <div class="h-20">
@@ -103,7 +77,6 @@
 <div>
     <p class="py-2 text-center text-sm text-gray-500 border-t border-gray-300">Copyright © 2024 Shinex. All Rights Reserved.</p>
 </div>
-<!-- copyright -->
 
 <!-- right icon -->
 <!-- làm sau -->

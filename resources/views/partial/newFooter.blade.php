@@ -1,32 +1,6 @@
 <!-- footer -->
 <div class="container mx-auto xl:px-36 bg-white flex justify-between items-center py-12 pt-52">
     <div class="w-full">
-        <!-- grid -cols- 3 -->
-            <!-- col-1 logo+ address-->
-                <!-- img logo-->
-                <!-- ul -->
-                    <!-- li -->
-                        <!-- a justify-start gap-4 -->
-                            <!-- i lấy trên mạng-->
-                            <!-- p -->
-
-            <!-- col-1 category-->
-                <!-- grid cols-2 -->
-                    <!-- col-1 -->
-                        <!-- ul -->
-                            <!-- li -->
-                                <!-- a -->
-                    <!-- col-1 -->
-                        <!-- ul -->
-                            <!-- li -->
-                                <!-- a -->
-            <!-- col-1 info more -->
-                <!-- mail -->
-                    <!-- input -->
-                    <!-- button -->
-                <!-- list icon -->
-                <!-- name company -->
-
         <div class="grid grid-cols-3">
             <div class="col-span-1 pr-12">
                 <div class="h-20">
@@ -95,7 +69,7 @@
                     <a href="#"><i class="fa-brands fa-x-twitter hover:text-blue-500"></i></a>
                 </div>
                 <p class="py-2">Nhập khẩu và phân phối độc quyền tại Việt Nam bởi: </p>
-                <p class=" uppercase text-blue-600">{{Config::get('website.author')}}</p>
+                <p class=" uppercase text-blue-500 font-medium text-xl">{{Config::get('website.author')}}</p>
             </div>
         </div>
     </div>

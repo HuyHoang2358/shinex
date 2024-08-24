@@ -8,24 +8,19 @@ use Illuminate\Contracts\View\Factory;
 class HomeController extends Controller
 {
 
+    // Trang chủ
     public function index(): View|Application|Factory
     {
-        // trang chủ
         return view('homepage', ['page'=>'homepage']);
     }
 
-    public function gallery(): View|Application|Factory
-    {
-        // views/front.content.gallery.blade.php
-        return view('front.content.gallery', ["page"=>'gallery']);
-    }
-
+    // Trang liên hệ
     public function contact(): View|Application|Factory
     {
         return view('front.content.contact',['page'=>'contact']);
     }
 
-
+    // Trang giới thiệu
     public function about(): View|Application|Factory
     {
         return view('front.content.about', ["page"=>'about']);

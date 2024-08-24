@@ -2,14 +2,6 @@
 <div class="shadow fixed z-50 w-full bg-white">
     <div class="container mx-auto md:px-36 bg-blue-300 ">
         <div class="w-full bg-red-200">
-            <!-- flex between -->
-                <!-- left menu -->
-                    <!--flex justify-start gap-->
-                <!-- logo -->
-                    <!-- img -->
-                <!-- right menu -->
-                    <!-- flex justify-end gap -->
-            <!-- -->
             <div class="flex justify-between ">
                 <div class="flex gap-8 items-center">
                     <a class="hover:text-blue-500" href="{{route('homepage')}}">TRANG CHỦ</a>

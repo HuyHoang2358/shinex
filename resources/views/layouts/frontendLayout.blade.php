@@ -34,14 +34,10 @@
     @yield('seo')
 </head>
 <body>
-    {{--@include('partial.frontHeader')--}}
-    <!-- New header -->
-    @include('partial.newHeader');
-    <div class="container mx-auto">
-        @yield('content')
-    </div>
-    <!-- New footer -->
-    @include('partial.newFooter')
-    {{--@include('partial.frontFooter')--}}
+@include('partial.frontHeader')
+<div class="container mx-auto">
+    @yield('content')
+</div>
+@include('partial.frontFooter')
 </body>
 </html>

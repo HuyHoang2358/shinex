@@ -11,7 +11,8 @@ export default {
   theme: {
     extend: {
         colors: {
-            'main-color': '#D0002D'
+            'text-color': '#03045e',
+            'text-light-color': '#0077b6',
         },
         backgroundImage:{
             'footer-bg':"url('/)",
@@ -22,7 +23,6 @@ export default {
       'roboto': ['Roboto', 'sans-serif'],
     },
   },
-/*  darkMode: "class",*/
   plugins: [require("flowbite/plugin")],
 }
 

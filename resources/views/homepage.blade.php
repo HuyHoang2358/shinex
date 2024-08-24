@@ -12,7 +12,7 @@
     <meta name="og:keywords" content="Shinex – nhãn hàng dược mỹ phẩm hàng đầu mang đến giải pháp chuyên sâu cho mọi loại da, kể cả làn da nhạy cảm nhất.">
 @endsection
 @section('content')
-    <div class="container mx-auto xl:px-36 text-lg pt-16 md:pt-20">
+    {{--<div class="container mx-auto xl:px-36 text-lg pt-16 md:pt-20">
         <div class="relative">
             <!-- banner -->
             <div class="h-[150px] md:h-[450px] w-full bg-red-200" >
@@ -321,5 +321,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>--}}
 @endsection

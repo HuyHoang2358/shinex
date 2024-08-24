@@ -75,7 +75,7 @@
     </div>
 </div>
 <div>
-    <p class="py-2 text-center text-sm text-gray-500 border-t border-gray-300">Copyright © 2024 Shinex. All Rights Reserved.</p>
+    <p class="py-2 text-center text-sm text-gray-500 border-t border-gray-300">Copyright © 2024 <a href="{{route('homepage')}}">Shinex</a>. All Rights Reserved.</p>
 </div>
 
 <!-- right icon -->

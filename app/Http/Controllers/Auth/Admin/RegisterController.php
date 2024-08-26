@@ -33,7 +33,6 @@ class RegisterController extends Controller
         ]);
 
         Auth::guard('admin')->login($admin);
-
         return redirect(RouteServiceProvider::ADMIN_DASHBOARD);
     }
 }

@@ -12,8 +12,12 @@ use Illuminate\View\View;
 
 class LoginController extends Controller
 {
-    public function create(): View
+    public function create(): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|RedirectResponse|\Illuminate\Contracts\Foundation\Application
     {
+        if(Auth::guard('admin')->check())
+        {
+            return redirect(RouteServiceProvider::ADMIN_DASHBOARD);
+        }
         return view('admin.auth.login');
     }
 
@@ -27,7 +31,8 @@ class LoginController extends Controller
         if(! Auth::guard('admin')->attempt($request->only('email', 'password'), $request->boolean('remember')))
         {
             throw ValidationException::withMessages([
-                'email' => trans('auth.failed'),
+                'email' => 'Đăng nhập không thành công',
+                'password' => 'Sai mật khẩu hoặc tài khoản không tồn tại',
             ]);
         }
 
@@ -36,7 +41,7 @@ class LoginController extends Controller
         return redirect()->intended(RouteServiceProvider::ADMIN_DASHBOARD);
     }
 
-    public function destroy(Request $request): RedirectResponse
+    public function logout(Request $request): RedirectResponse
     {
         Auth::guard('admin')->logout();
 
@@ -44,6 +49,6 @@ class LoginController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/admin/login');
+        return redirect()->route('admin.login');
     }
 }

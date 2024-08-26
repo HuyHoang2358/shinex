@@ -23,7 +23,9 @@
     <div class="flex overflow-hidden">
         @include('admin.partials.sidebar')
         <!-- BEGIN: Content -->
-        @yield('content')
+        <div class="content">
+            @yield('content')
+        </div>
         <!-- END: Content -->
     </div>
 <!-- BEGIN: JS Assets-->

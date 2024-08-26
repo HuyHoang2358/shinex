@@ -14,8 +14,8 @@ class LoginController extends Controller
 {
     public function create(): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|RedirectResponse|\Illuminate\Contracts\Foundation\Application
     {
-        if(Auth::guard('admin')->check())
-        {
+        // Kiểm tra đã login chưa
+        if(Auth::guard('admin')->check()) {
             return redirect(RouteServiceProvider::ADMIN_DASHBOARD);
         }
         return view('admin.auth.login');

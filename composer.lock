@@ -4,67 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0d37c4abf0cb2225b667dc982578e33",
+    "content-hash": "0b29559c36beba6ecb9a1f0a26c3f3aa",
     "packages": [
-        {
-            "name": "alexusmai/laravel-file-manager",
-            "version": "3.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/alexusmai/laravel-file-manager.git",
-                "reference": "fdc02fe874dee7375eddf10ad302bb358ac5ff7d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/alexusmai/laravel-file-manager/zipball/fdc02fe874dee7375eddf10ad302bb358ac5ff7d",
-                "reference": "fdc02fe874dee7375eddf10ad302bb358ac5ff7d",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "ext-zip": "*",
-                "intervention/image-laravel": "^1.2.0",
-                "laravel/framework": "^9.0|^10.0|^11.0",
-                "league/flysystem": "^3.0",
-                "php": "^8.1"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Alexusmai\\LaravelFileManager\\FileManagerServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Alexusmai\\LaravelFileManager\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Aleksandr Manekin",
-                    "email": "alexusmai@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "File manager for Laravel",
-            "homepage": "https://github.com/alexusami/laravel-file-manager",
-            "keywords": [
-                "file",
-                "laravel",
-                "manager"
-            ],
-            "support": {
-                "issues": "https://github.com/alexusmai/laravel-file-manager/issues",
-                "source": "https://github.com/alexusmai/laravel-file-manager/tree/3.2.0"
-            },
-            "time": "2024-05-11T14:41:08+00:00"
-        },
         {
             "name": "brick/math",
             "version": "0.12.1",

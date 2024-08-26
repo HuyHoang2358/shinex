@@ -26,6 +26,7 @@ class RegisterController extends Controller
             'password' => ['required', 'confirmed', 'min:8'],
         ]);
         $input = $request->all();
+
         $admin = Admin::create([
             'name' => $input['name'],
             'email' => $input['email'],

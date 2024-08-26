@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('slug');
             $table->text('icon')->nullable();
             $table->text('description')->nullable();
-            $table->foreignId('parent_id')->default(0)->constrained('categories');
+            $table->bigInteger('parent_id')->default(0);
             $table->timestamps();
         });
     }

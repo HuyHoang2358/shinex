@@ -13,7 +13,10 @@ use App\Http\Controllers\Auth\Admin\LoginController;
 use App\Http\Controllers\Auth\Admin\RegisterController;
 
 
-
+// Route cho quản lý file laravel-filemanager
+/*Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth:admin']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});*/
 Route::namespace('admin')->group(function () {
 
     // Authentication routes
@@ -56,10 +59,16 @@ Route::namespace('admin')->group(function () {
             Route::get('/delete/{id}', [PostController::class,'destroy'])->name('admin.post.delete');
         });
 
-        // Quản lý ảnh, bài viết
+        // Quản lý ảnh, media
         Route::group(['prefix'=>'media'],function() {
             Route::get('/', [MediaController::class,'index'])->name('admin.media.index');
         });
+
+
+        Route::group(['prefix' => '/laravel-filemanager', 'middleware' => ['auth:admin']], function () {
+            \UniSharp\LaravelFilemanager\Lfm::routes();
+        });
+
 
         // Quản lý liên hệ
         Route::group(['prefix'=>'order'],function() {

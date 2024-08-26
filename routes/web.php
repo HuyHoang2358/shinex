@@ -34,14 +34,9 @@ Route::get('/tin-tuc',[PostController::class, 'index'])->name('post.index');
 Route::get('/bai-viet/{slug}',[PostController::class, 'detail'])->name('post.detail');
 
 
-
 // Route trang danh sách sản phẩm http://shinex.th/san-pham
 Route::get('/san-pham', [ProductController::class, 'index'])->name('product.list');
 
 // Xem thông tin chi tiết từng sản phẩm // shinex.th/{slug}
 // slug là biến truyền vào trong product để lấy thông tin sản phẩm ra
 Route::get('/{slug}',[ProductController::class, 'detail'])->name('product.detail');
-
-
-
-

@@ -83,7 +83,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-12 mt-5 mb-5">
-                <svg width="100%" height="auto" viewBox="0 0 636 324" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: translateY(0.0545697px);">
+                <svg width="100%" height="100%" viewBox="0 0 636 324" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: translateY(0.0545697px);">
                     <g id="OBJECTS">
                         <g id="Group">
                             <path id="Vector" d="M101.3 255.2C101.3 255.2 111.1 272.6 181.8 280.5C252.5 288.4 288.2 314.9 333.1 322.8C378 330.7 433.6 278.5 481.8 286.5C530 294.4 588.2 264.2 592.8 255.2H101.3Z" fill="#2F1829"></path>
@@ -401,7 +401,5 @@
 </a>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
-<script src="https://cdpn.io/cpe/boomboom/pen.js?key=pen.js-64cfeeec-339b-2faa-844b-ee39f13e1db7" crossorigin=""></script>
-
 
 </body></html>

@@ -11,6 +11,7 @@ return [
     "address" => "Tầng 9 Toà nhà Hồ Gươm Plaza, Số 102 Trần Phú, Mộ Lao, Hà Đông, Hà Nội",
     "url_facebook" => "#",
     "url_messenger" => "#",
-    "url_instagram" => "#",
+    "url_insta" => "#",
     "url_youtube" => "#",
+    "url_twitter" => "#",
 ];

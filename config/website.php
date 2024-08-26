@@ -13,4 +13,5 @@ return [
     "url_messenger" => "#",
     "url_instagram" => "#",
     "url_youtube" => "#",
+    "url_twitter" => "#",
 ];

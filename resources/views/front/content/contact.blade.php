@@ -14,32 +14,28 @@
 @endsection
 
 @section('content')
-    <div class="container mx-auto px-2 xl:px-36 text-lg">
-        <div class="md:px-48 py-20 md:py-24">
-            <h1 class="text-center text-2xl md:text-3xl font-medium text-blue-500">Liên hệ với chúng tôi</h1>
-
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-16 pt-4 md:pt-16">
-                <div class="col-span-1 md:col-span-2 text-sm md:text-base">
-                    <h2 class="text-base md:text-lg font-semibold">Địa chỉ</h2>
-                    <p class="py-1 pl-2 text-gray-500">{{Config::get('website.address')}}</p>
-
-                    <h2 class="text-base md:text-lg font-semibold mt-2">Thời gian hoạt động</h2>
-                    <p class="py-1 pl-2 text-gray-500">Từ 9:00 - đến 21:30</p>
-
-                    <h2 class="text-base md:text-lg font-semibold mt-2">Số điện thoại</h2>
-                    <p class="py-1 pl-2 text-gray-500">{{Config::get('website.hotline')}}</p>
-                </div>
-                <div class="col-span-1 md:col-span-3 text-sm md:text-base">
-                    <h2 class="text-lg md:text-lg font-semibold text-center md:text-start">Để lại tin nhắn cho chúng tôi</h2>
-
-                    <input class="text-sm md:text-base w-full bg-gray-100 px-4 py-2 text-gray-700 mt-8 border border-gray-100 " placeholder="Nhập tên của bạn" type="text">
-                    <input class="text-sm md:text-base w-full bg-gray-100 px-4 py-2 text-gray-700 my-5 border border-gray-100" placeholder="Nhập địa chỉ email" type="text">
-                    <textarea class="text-sm md:text-base w-full bg-gray-100 px-4 py-2 text-gray-700 border border-gray-100" rows=3 placeholder="Nhập ghi chú" type="text"></textarea>
-                    <div class="flex justify-end pt-4">
-                        <button class="px-10 py-3 rounded-tr-full rounded-bl-full bg-blue-400 text-white">Gửi tin nhắn</button>
-                    </div>
-                </div>
+    <div class="container mx-auto px-2 xl:px-36 text-lg grid grid-cols-2 pt-12 my-32 gap-16 ">
+        <div class="col-span-1">
+            <h1 class="text-3xl font-medium text-blue-500">LIÊN HỆ TƯ VẤN MIỄN PHÍ</h1>
+            <div class="flex justify-between mr-16 mt-6 mb-2 font-medium">
+                <p><a class="flex items-center hover:text-blue-500" href="#"><i class="fa-solid fa-phone-volume py-1 px-1 text-blue-500 pr-2 text-2xl"></i>{{Config::get('website.hotline')}}</a></p>
+                <p><a class="flex items-center hover:text-blue-500" href="#"><i class="fa-solid fa-envelope py-1 px-1 text-blue-500 pr-2 text-2xl"></i>{{Config::get('website.email')}}</a></p>
             </div>
+            <p><a class="flex items-center font-medium mr-16 hover:text-blue-500" href="#"><i class="fa-solid fa-location-dot py-1 px-1 text-blue-500 pr-2 text-2xl"></i>{{Config::get('website.address')}}</a></p>
+            <div class="pt-5">
+                <form action="">
+                    <div class="flex gap-8">
+                        <input class="w-full h-12 py-0 border-1 border-gray-300 " name="name" autocomplete="name" autofocus required type="text" placeholder="Tên khách hàng">
+                        <input class="w-full h-12 border-1 border-gray-300" name="phone" autocomplete="phone" required type="text" placeholder="Số điện thoại">
+                    </div>
+                    <input class="w-full my-6 h-12 border-1 border-gray-300" name="address" autocomplete="address" type="text" placeholder="Địa chỉ"><br>
+                    <textarea class="w-full h-32 border-1 border-gray-300" name="note" autocomplete="note" required placeholder="Ghi chú"></textarea>
+                </form>
+            </div>
+            <button type="submit" class="mt-5 bg-blue-500 rounded-tr-3xl rounded-bl-3xl px-9 py-2 text-white">GỬI YÊU CẦU</button>
+        </div>
+        <div class="col-span-1">
+            <iframe class="h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.3725064351283!2d105.78100657587142!3d20.977699989529178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135adfb2968be57%3A0x9c41d21e83e735a4!2zVOG6p25nIDkgVMOyYSBuaMOgIEjhu5MgR8awxqFtIFBsYXph!5e0!3m2!1svi!2s!4v1724643395657!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 @endsection

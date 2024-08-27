@@ -1,15 +1,20 @@
 <div class="input-group gap-2">
-    <input id="thumbnail" class="form-control" type="text" name="{{$input_name}}">
+    <input id="thumbnail" class="form-control" type="text" name="{{$input_name}}" value="{{join(',', $icons)}}">
     <span class="input-group-btn">
         <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
             <i class="fa fa-picture-o"></i> Chọn
         </a>
     </span>
 </div>
-<div id="holder" style="margin-top:15px;max-height:100px;"></div>
+<div id="holder" class="mt-4 flex justify-start items-center gap-4">
+    @if(count($icons)>0)
+        @foreach($icons as $icon)
+            <img src="{{asset($icon)}}" alt="" class="h-20 bg-blue-400">
+        @endforeach
+    @endif
+</div>
 
 <script type="text/javascript">
-    // single upload button
     let is_single_upload_button = true;
     let lfm = function(id, type, options) {
         let button = document.getElementById(id);
@@ -25,7 +30,8 @@
 
             window.open(route_prefix + '?type=' + type || 'file', 'FileManager', 'width=1200,height=700');
             window.SetUrl = function (items) {
-                if (!is_single_upload_button) if(items.length > 0) items = items[0];
+                if (is_single_upload_button)
+                    if(items.length > 0) items = [items[0]];
 
                 target_input.value = items.map(function (item) {
                     return item.url.replace(/^.*\/\/[^\/]+/, '');

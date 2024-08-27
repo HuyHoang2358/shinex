@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * @property mixed $childs
+ * @method static where(string $string, int $int)
+ * @method static find($id)
  */
 class Category extends Model
 {

@@ -1,3 +1,3 @@
-<div class="w-full h-48 bg-red-200 mt-20">
+<div class="text-blue-600 mt-16 bg-blue-200 py-2 ">
     Trang chủ / {{$title}}
 </div>

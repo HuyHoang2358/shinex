@@ -13,7 +13,7 @@
             <!-- BEGIN: Input -->
             <div class="intro-y box">
                 <div id="input" class="p-5">
-                    <form method="POST" action="{{route('admin.category.edit', $category->id)}}">
+                    <form method="POST" action="{{route('admin.category.update', $category->id)}}">
                         @csrf
                         <div class="preview">
                             <div>

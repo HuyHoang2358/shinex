@@ -1,7 +1,9 @@
 @extends('layouts.newLayout')
+
 @section('title')
     {{$product->name}}
 @endsection
+
 @section('seo')
     <meta name="title" content="{{$product->name}} | Shinex">
     <meta name="keywords" content="{{$product->name}}, Shinex, mỹ phẩm, kem bôi, kem dưỡng da, kem làm trắng da, mỹ phẩm chất lượng cao, chăm sóc da, phục hồi da, chăm sóc sắc đẹp, mỹ phẩm làm đẹp">
@@ -12,12 +14,16 @@
     <meta name="og:description" content="{{$product->description}}">
 @endsection
 
+@section('banner')
+    <div class="pt-12 bg-gray-100">
+        <div class="container mx-auto px-2 xl:px-36 text-lg">
+            @include('partial.component_Breadcrumb', ["routeName" => 'product.detail', "breadcrumb" => (object)['name' => $product->name, 'slug' => $product->slug] ])
+        </div>
+    </div>
+@endsection
 @section('content')
     <div class="container mx-auto px-2 xl:px-36 text-lg">
-        <div class="w-full py-16 md:py-20">
-            <!-- BreadCrumb -->
-            @include('partial.component_Breadcrumb', ["routeName" => 'product.detail', "breadcrumb" => (object)['name' => $product->name, 'slug' => $product->slug] ])
-
+        <div class="w-full py-8 md:py-12">
             <!-- Main Information of Product -->
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-24 mt-4 px-24">
                 <div class="col-span-1 md:col-span-2">
@@ -44,18 +50,19 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-span-1 md:col-span-2 text-base md:text-lg">
                     <h1 class="font-medium text-2xl md:text-3xl">{{$product->name}}</h1>
                     <h2 class="font-semibold text-gray-400 border-b-[1px] border-gray-300 border-dashed pb-5">{{$product->title}}</h2>
                     <ul class="list-disc pl-5 pt-5">
-                        <li class="text-base opacity-85">Làm mờ các đốm nâu trên da, tấn công chuyên sâu các đốm nâu trên da.</li>
-                        <li class="text-base opacity-85">Loại bỏ tình trạng ngứa ran, mẩn đỏ, khô, ngứa, rát da. Chăm sóc toàn diện cho làn da bị tổn thương.</li>
-                        <li class="text-base opacity-85">Giảm các đốm tàn nhang và ngăn ngừa tái phát.</li>
+                        @foreach($product->numbers as $number)
+                            <li class="text-base opacity-85">{{$number->title}}</li>
+                        @endforeach
                     </ul>
                     <div class="text-base py-5">
                         <div class="border-b-[1px] border-gray-300 border-dashed pb-5">
                             <h1 class="font-medium text-lg">Thích hợp với</h1>
-                            <p class="opacity-85 mt-4">Mọi loại da cơ thể</p>
+                            <p class="opacity-85 mt-4">Mọi loại da, cơ thể</p>
                         </div>
                         <div class="pt-5 grid-cols-2 grid gap-5">
                             <button class="col-span-1 border-gray-400 border-2 rounded-lg py-2 text-md font-medium text-blue-600 hover:bg-blue-500 hover:border-blue-500 hover:text-white">Thêm Vào Giỏ Hàng</button>
@@ -75,32 +82,28 @@
                     </div>
                 </div>
             </div>
+
             <!-- Product detail -->
             <div class="border-b border-gray-300 dark:border-gray-700 mt-4 md:mt-16">
                 <ul class="flex justify-center -mb-px text-sm md:text-lg font-medium text-center" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
                     <li class="me-2" role="presentation">
-                        <button class="inline-block p-4 border-b-2 border-opacity-0 hover:border-b-2 hover:text-gray-600 hover:border-gray-400 uppercase" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Mô tả sản phẩm</button>
+                        <button class="inline-block p-4 border-b-2 border-opacity-0 hover:border-b-2 hover:text-gray-600 hover:border-gray-400 uppercase" id="description-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Mô tả sản phẩm</button>
                     </li>
                     <li class="me-2" role="presentation">
-                        <button class="inline-block p-4 border-b-2 border-opacity-0 hover:border-b-2 hover:text-gray-600 hover:border-gray-400 uppercase" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Thành phần chính</button>
+                        <button class="inline-block p-4 border-b-2 border-opacity-0 hover:border-b-2 hover:text-gray-600 hover:border-gray-400 uppercase" id="component-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Thành phần chính</button>
                     </li>
                     <li class="me-2" role="presentation">
-                        <button class="inline-block p-4 border-b-2 border-opacity-0 hover:border-b-2 hover:text-gray-600 hover:border-gray-400 uppercase" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Chỉ định</button>
+                        <button class="inline-block p-4 border-b-2 border-opacity-0 hover:border-b-2 hover:text-gray-600 hover:border-gray-400 uppercase" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Công dụng</button>
                     </li>
                     <li role="presentation">
                         <button class="inline-block p-4 border-b-2 border-opacity-0 hover:border-b-2 hover:text-gray-600 hover:border-gray-400 uppercase" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">Cách dùng</button>
                     </li>
                 </ul>
             </div>
+
             <div id="default-tab-content">
-                <div class="hidden py-12 rounded-lg" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="hidden py-12 rounded-lg" id="profile" role="tabpanel" aria-labelledby="description-tab">
                     <!-- description -->
-                    <div class="md:pt-4 text-center">
-                        <h3 class="text-xl md:text-3xl font-semibold text-blue-800 pb-3">Sự Kết Hợp Hoàn Hảo <br>Mang Đến Chất Lượng Tuyệt Vời</h3>
-                        <div class="flex justify-center">
-                            <img class="h-4 md:h-6" src="{{asset('/images/logo/symbolsection.webp')}}" alt="">
-                        </div>
-                    </div>
                     <div class="md:px-10 flex my-4 md:my-10">
                         <div class="w-[35%] flex flex-col items-center justify-center hidden md:block">
                             <h4 class="text-lg font-semibold text-blue-800 pb-8 text-center">Giải quyết các vấn đề thực sự về da</h4>
@@ -122,43 +125,39 @@
                     </div>
                 </div>
 
-                <div class="hidden py-12 rounded-lg" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
-                    <div class="pt-4 text-center">
-                        <h3 class="text-xl md:text-3xl font-semibold text-blue-800 pb-3">Thành phần chính</h3>
-                        <div class="flex justify-center">
-                            <img class="h-4 md:h-6" src="{{asset('/images/logo/symbolsection.webp')}}" alt="">
-                        </div>
-                        <div class="text-base md:text-lg font-italic font-semibold text-blue-500">
-                            <p class="py-1">Ưu tiên các thành phần thảo dược, không gây kích ứng da, mang lại hiệu quả trong điều trị </p>
-                            <p class="py-1 hidden md:block">Với Shinex, thay đổi làn da một cách hiệu quả là thay đổi chất lượng cuộc sống trọn vẹn và đầy ý nghĩa.</p>
-                        </div>
-                    </div>
 
-                    <div class="my-4 md:my-10 border-b-2 border-gray-200">
-                        @for($i=0; $i<=3; $i++)
-                            <div class="group/item py-8 border-t-2 border-gray-200 px-10">
-                                <div class="flex justify-between">
-                                    <h3 class="text-xl">Kỳ Tử</h3>
-                                    <div>
-                                        <i class="fa-solid fa-arrow-down"></i>
-                                    </div>
+                <div class="hidden py-12 rounded-lg" id="dashboard" role="tabpanel" aria-labelledby="component-tab">
+                    <div class="flex justify-center gap-16 items-center">
+                        @foreach($product->components as $component)
+                            <div>
+                                <div class="w-48 h-48 rounded-full border-2 border-blue-300">
+                                    <img src="{{asset($component->image)}}" alt="{{Str::slug($component->name)}}" class="w-full h-full rounded-full">
                                 </div>
-                                <p class="group-hover/item:block hidden pt-4 text-base pr-10">Có lượng calo thấp và giàu chất dinh dưỡng, vì vậy bạn chắc chắn có thể thêm loại quả này vào chế độ ăn kiêng hoặc kế hoạch giảm cân của mình. Ngoài ra, quả rất ít đường và chất xơ khiến chúng có cảm giác no nhưng không có <nhi>      </nhi>ều calo có thể dẫn đến tăng cân.</p>
+                                <h5 class="text-center mt-2 font-semibold">
+                                    {{$component->name}}
+                                </h5>
                             </div>
-                        @endfor
+                        @endforeach
                     </div>
 
+                    <div class="bg-gray-100 mt-8 p-8">
+                        <ul>
+                            @foreach($product->components as $component)
+                                <li>
+                                    <div class=" mt-2">
+                                        <h5 class="font-medium">{{$component->name}}</h5>
+                                        <p class="pl-12">{{$component->title}}</p>
+                                    </div>
+                                </li>
+                            @endforeach
+                        </ul>
 
+
+                    </div>
                 </div>
 
                 <div class="hidden py-12 rounded-lg" id="settings" role="tabpanel" aria-labelledby="settings-tab">
                     <!-- assign -->
-                    <div class="pt-4 text-center">
-                        <h3 class="text-xl md:text-3xl font-semibold text-blue-800 pb-3">Chỉ định</h3>
-                        <div class="flex justify-center">
-                            <img class="h-4 md:h-6" src="{{asset('/images/logo/symbolsection.webp')}}" alt="">
-                        </div>
-                    </div>
                     <div class="my-4 md:px-10 md:my-10 flex items-start">
                         <div class="hidden md:block w-[35%] flex flex-col items-center justify-center">
                             <h4 class="text-lg font-semibold text-blue-800 pb-8 text-center">Giải quyết các vấn đề thực sự về da</h4>
@@ -198,20 +197,6 @@
                         <li>Để đạt hiệu quả tốt nhất, nên kết hợp với các sản phẩm dưỡng da khác trong cùng bộ chăm sóc da.</li>
                     </ul>
                 </div>
-            </div>
-
-            <!-- Advertisement Product -->
-            <div class="relative group/item">
-                <a href="#">
-                    <div class="">
-                        <img class="w-full h-[650px]" src="{{asset('images/components/test_1.jpg')}}" alt="">
-                    </div>
-                    <div class="absolute bottom-[15%] w-full text-white text-center">
-                        <h2 class="text-sm uppercase">Điều tuyệt vời đến từ nguyên liệu thiên nhiên</h2>
-                        <h3 class="text-3xl uppercase py-5">Từ những thứ nhỏ bé lại có thể tạo ra  <br>những vẻ đẹp thuần khiết</h3>
-                        <button class="bg-white text-base py-2 px-5 text-black rounded-lg">CHI TIẾT <i class="fa-solid fa-arrow-right pl-3 group-hover/item:translate-x-5 group-hover/item:mr-5"></i></button>
-                    </div>
-                </a>
             </div>
 
             <!-- Related Product -->

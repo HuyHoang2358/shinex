@@ -40,7 +40,7 @@
                         <a href="#"><h1 class="text-xl font-medium hover:text-blue-700 pt-5">Y2C Bio Beauty tại Korea Lotte Department Store</h1></a>
                         <i class="fa-regular fa-calendar-days text-gray-600 text-lg pt-10"></i><span class="px-2 text-gray-600 font-medium text-base">9/10/2024</span>
                         <p class="text-base leading-relaxed text-justify overflow-hidden text-ellipsis line-clamp-3 pt-1 mb-3">
-                            Sứ mệnh cao cả trong việc mang đến những sản phẩm cao cấp, lành tính từ thiên nhiên, Y2C Bio Beauty tự hào khi hiện diện tại nhiều Lotte Department tại Hàn Quốc, nhằm mang
+                            Sứ mệnh cao cả trong việc mang đến những sản phẩm cao cấp, lành tính từ thiên nhiên, Y2C Bio Beauty tự hào khi hiện diện tại nhiều Lotte Department tại Hàn Quốc, Y2C Bio Beauty tự hào khi hiện diện tại nhiều Lotte Department tại Hàn Quốc,
                         </p>
                         <button class="px-16 py-2 text-white bg-blue-600 hover:text-blue-600 hover:bg-white rounded-tr-3xl rounded-bl-3xl text-lg font-semibold hover:duration-500 ease-in-out">Xem thêm</button>
                     </div>

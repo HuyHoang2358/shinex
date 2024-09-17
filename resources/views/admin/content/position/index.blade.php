@@ -1,21 +1,21 @@
 @extends('admin.layouts.app')
 @section('title')
-    {{ __('Trang quản lý danh mục') }}
+    {{ __('Trang quản lý vị trí') }}
 @endsection
 @section('content')
     <div class="intro-y flex items-center mt-8 justify-between">
         <h2 class="text-lg font-medium mr-auto">
-            Danh mục
+            Danh mục Vị Trí
         </h2>
         <div class="flex justify-end items-center gap-2">
-            <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
+            <div class="sm:w-auto sm:mt-0 sm:ml-auto md:ml-0">
                 <div class="w-56 relative text-slate-500">
                     <input type="text" class="form-control w-56 box pr-10" placeholder="Search...">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" icon-name="search" class="lucide lucide-search w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0" data-lucide="search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                 </div>
             </div>
-            <a href="{{route('admin.category.add')}}">
-                <button class="btn btn-primary shadow-md">Thêm mới danh mục</button>
+            <a href="{{route('admin.position.add')}}">
+                <button class="btn btn-primary shadow-md">Thêm mới vị trí</button>
             </a>
             <div class="dropdown">
                 <button class="dropdown-toggle btn px-2 box" aria-expanded="false" data-tw-toggle="dropdown">
@@ -37,20 +37,36 @@
             </div>
         </div>
     </div>
-    <!-- Table để hiển thị ra danh sách danh mục -->
+    {{--table--}}
     <div class="grid grid-cols-12 gap-6 mt-5">
         <div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
             <table class="table table-report -mt-2">
                 <thead>
                 <tr>
-                    <th class="whitespace-nowrap">ICON</th>
-                    <th class="whitespace-nowrap">TÊN DANH MỤC</th>
+                    <th class="whitespace-nowrap">TÊN VỊ TRÍ</th>
                     <th class="text-center whitespace-nowrap">SLUG</th>
                     <th class="text-center whitespace-nowrap">HÀNH ĐỘNG</th>
                 </tr>
                 </thead>
                 <tbody>
-                    @include('admin.content.category.row', ["categories"=>$categories, "level" => 0])
+                    @foreach($positions as $position)
+                        <tr>
+                            <td >{{$position->name}}</td>
+                            <td class="text-center">{{$position->slug}}</td>
+                            <td class="table-report__action w-56">
+                                <div class="flex justify-center items-center">
+                                    <a class="flex items-center mr-3" href="{{route('admin.position.edit', $position->id)}}">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" icon-name="check-square" data-lucide="check-square" class="lucide lucide-check-square w-4 h-4 mr-1"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path></svg>
+                                        Edit
+                                    </a>
+                                    <a class="flex items-center text-danger" href="{{route('admin.position.delete', $position->id)}}" data-tw-toggle="modal" data-tw-target="#delete-confirmation-modal">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" icon-name="trash-2" data-lucide="trash-2" class="lucide lucide-trash-2 w-4 h-4 mr-1"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                                        Delete
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

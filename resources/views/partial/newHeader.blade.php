@@ -6,6 +6,7 @@
                 <div class="flex gap-8 items-center">
                     <a class="hover:text-blue-500" href="{{route('homepage')}}">TRANG CHỦ</a>
                     <a class="hover:text-blue-500" href="{{route('about')}}">GIỚI THIỆU</a>
+                    <a class="hover:text-blue-500" href="{{route('listProduct.blade.php')}}">SẢN PHẨM</a>
                     <a class="hover:text-blue-500" href="#">SẢN PHẨM</a>
                 </div>
                 <div class="h-20">

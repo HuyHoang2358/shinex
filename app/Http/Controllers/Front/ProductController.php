@@ -12,7 +12,7 @@ class ProductController extends Controller
 {
     // Trả về danh sách các sản phẩm
     public function index(){
-
+        return view('front.content.product.listProduct');
     }
 
     public function detail($slug): View|Application|Factory

@@ -48,6 +48,7 @@
                         <ul class="text-gray-800 flex flex-col gap-2 pt-2">
                             <li class="hover:text-blue-500 hover:underline"><a href="{{route('about')}}">Giới thiệu</a></li>
                             <li class="hover:text-blue-500 hover:underline"><a href="#">Sản phẩm</a></li>
+                            <li class="hover:text-blue-500 hover:underline"><a href="{{route('listProduct.blade.php')}}">Sản phẩm</a></li>
                             <li class="hover:text-blue-500 hover:underline"><a href="{{route('post.index')}}">Tin tức</a></li>
                             <li class="hover:text-blue-500 hover:underline"><a href="{{route('contact')}}">Liên hệ</a></li>
                         </ul>

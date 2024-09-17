@@ -12,11 +12,15 @@
     <meta name="og:description" content="Shinex, mỹ phẩm, kem bôi, kem dưỡng da, kem làm trắng da, mỹ phẩm chất lượng cao, chăm sóc da, phục hồi da, chăm sóc sắc đẹp, mỹ phẩm làm đẹp">
     <meta name="og:keywords" content="Shinex – nhãn hàng dược mỹ phẩm hàng đầu mang đến giải pháp chuyên sâu cho mọi loại da, kể cả làn da nhạy cảm nhất.">
 @endsection
+
+@section('banner')
+    @include('front.common.titlePage', ['pageName' => 'Liên hệ', 'routeName' => 'contact'])
+@endsection
+
+
 @section('content')
-    <!-- Title page  truyền biến title vào để hiển thị-->
-    @include('front.common.titlePage', ['title'=>'Liên hệ'])
     <!-- content -->
-    <div class="container mx-auto px-2 xl:px-36 text-lg grid grid-cols-2 pt-12 my-32 gap-16 ">
+    <div class="container mx-auto px-2 xl:px-36 text-lg grid grid-cols-2 py-12 gap-16 ">
         <div class="col-span-1">
             <h1 class="text-3xl font-medium text-blue-500">LIÊN HỆ TƯ VẤN MIỄN PHÍ</h1>
             <div class="flex justify-between mr-16 mt-6 mb-2 font-medium">

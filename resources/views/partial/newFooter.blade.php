@@ -5,7 +5,7 @@
             <div class="grid grid-cols-3">
                 <div class="col-span-1 pr-12">
                     <div class="h-20">
-                        <a href="{{route('homepage')}}"><img class="h-full" src="{{asset('/images/logo/logo.png')}}" alt=""></a>
+                        <a href="{{url('/')}}"><img class="h-full" src="{{asset('/images/logo/logo.png')}}" alt="shinex-logo"></a>
                     </div>
                     <h4 class="py-3">THÔNG TIN LIÊN HỆ</h4>
                     <ul class="text-gray-800">
@@ -47,8 +47,8 @@
                         <h4>LIÊN KẾT NHANH</h4>
                         <ul class="text-gray-800 flex flex-col gap-2 pt-2">
                             <li class="hover:text-blue-500 hover:underline"><a href="{{route('about')}}">Giới thiệu</a></li>
-                            <li class="hover:text-blue-500 hover:underline"><a href="{{route('product.list')}}">Sản phẩm</a></li>
-                            <li class="hover:text-blue-500 hover:underline"><a href="{{route('post.index')}}">Tin tức</a></li>
+                            <li class="hover:text-blue-500 hover:underline"><a href="{{route('product.index')}}">Sản phẩm</a></li>
+                            <li class="hover:text-blue-500 hover:underline"><a href="{{route('news.index')}}">Tin tức</a></li>
                             <li class="hover:text-blue-500 hover:underline"><a href="{{route('contact')}}">Liên hệ</a></li>
                         </ul>
                     </div>

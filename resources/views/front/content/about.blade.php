@@ -1,149 +1,272 @@
 @extends('layouts.newLayout')
-@section('subTitle')
-    Giới thiệu |
+@section('title')
+    Giới thiệu
 @endsection
-@section('head')
+@section('seo')
+    <meta name="title" content="Trang chủ | Shinex">
+    <meta name="keywords" content="Shinex, mỹ phẩm, kem bôi, kem dưỡng da, kem làm trắng da, mỹ phẩm chất lượng cao, chăm sóc da, phục hồi da, chăm sóc sắc đẹp, mỹ phẩm làm đẹp">
+    <meta name="description" content="Shinex – nhãn hàng dược mỹ phẩm hàng đầu mang đến giải pháp chuyên sâu cho mọi loại da, kể cả làn da nhạy cảm nhất.">
 
+    <meta name="og:title" content="Trang chủ | Shinex">
+    <meta name="og:description" content="Shinex, mỹ phẩm, kem bôi, kem dưỡng da, kem làm trắng da, mỹ phẩm chất lượng cao, chăm sóc da, phục hồi da, chăm sóc sắc đẹp, mỹ phẩm làm đẹp">
+    <meta name="og:keywords" content="Shinex – nhãn hàng dược mỹ phẩm hàng đầu mang đến giải pháp chuyên sâu cho mọi loại da, kể cả làn da nhạy cảm nhất.">
 @endsection
 @section('content')
-    <!-- banner -->
-    <div class="banner_w3lspvt-2">
-
-    </div>
-
-    <!-- page details -->
-    <div class="breadcrumb-agile">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="{{url('/')}}">Trang chủ</a>
-            </li>
-            <li class="breadcrumb-item active" aria-current="page"> Giới thiệu</li>
-        </ol>
-    </div>
-
-    <!-- about -->
-    <section class="about-w3ls py-5" id="about">
-        <div class="container py-xl-5 py-lg-3">
-            <h3 class="title text-center text-bl font-weight-bold mb-1">Shinex</h3>
-            <p class="title-sub text-center mb-sm-5 mb-4">The next to shine is you</p>
-            <div class="row">
-                <div class="col-lg-6 about-left-w3pvt">
-                    <div class="main-img">
-                        <img src="{{asset('images/ab.jpg')}}" alt="" class="img-fluid pos-aboimg2">
-                    </div>
+    <div class="container mx-auto xl:px-36 text-lg md:pt-20 pt-16">
+        <!-- Section 4 -->
+        <div class="px-2 py-6">
+            <div class="text-center">
+                <h2 class="text-xl md:text-3xl font-semibold text-blue-800 pb-3">Bộ sưu tập các sản phẩm</h2>
+                <div class="flex justify-center">
+                    <img class="h-4 md:h-6" src="{{asset('/images/logo/symbolsection.webp')}}" alt="shinex-symbol-section">
                 </div>
-                <div class="col-lg-6 about-right pt-5">
-                    <h3 class="tittle-w3layouts text-uppercase pr-lg-5 mt-2" style="font-weight: 500">Trong thời đại chú
-                        trọng tính hiệu quả, hiệu quả mang lại là yếu tố quan trọng nhất. </h3>
-                    <p class="mt-4 mb-5" style="color:red; font-style: italic">"Các cách chăm sóc da mà không giải quyết được vấn đề về da đều vô nghĩa"</p>
+                <div class="text-blue-400 text-base md:text-lg font-semibold">
+                    <p class="py-1">"Trong thời đại chú trọng tính hiệu quả, hiệu quả mang lại là yếu tố quan trọng nhất"</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-
-
-    <!-- services -->
-    <div class="services py-5" id="services">
-        <div class="container py-xl-5 py-lg-3">
-            <h3 class="title text-center text-bl font-weight-bold mb-1">28 Ngày</h3>
-            <p class="title-sub text-center mb-sm-5 mb-4">Chu kỳ dưỡng da tái tạo lại sức sống mới</p>
-            <div class="ins-sec1">
-                <div class="row">
-
-
-                    <div class="col-lg-8 mx-auto mt-lg-5">
-                        <div class="row">
-                            <div class="col-lg-6 my-lg-0 my-md-5">
-                                <div class="abt-block mt-sm-0">
-                                    <div class="serv_abs  serv_bottom">
-                                        <span class="fa fa-user-md"></span>
-                                    </div>
-                                    <h3>Bí quyết làm trắng</h3>
-                                    <p> Bí quyết “điều chỉnh bên trong và duy
-                                        trì vẻ bên ngoài” làn da.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 mt-lg-0 mt-md-5">
-                                <div class="abt-block">
-                                    <div class="serv_abs  serv_bottom">
-                                        <span class="fa fa-thumbs-o-up"></span>
-                                    </div>
-                                    <h3>Chăm sóc toàn diện</h3>
-                                    <p> Phát triển các mô dưới da
-                                        Sử dụng thường xuyên, có thể thấy
-                                        sự thay đổi của làn da
-                                    </p>
-                                </div>
-                            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mt-16">
+                <div class="col-span-1 flex flex-col md:gap-4 gap-6">
+                    <div class="flex justify-end gap-4 md:gap-10">
+                        <div class="text-base md:text-lg text-gray-500">
+                            <a href="{{route('product.detail', 'whitening-remove-freckle-cream')}}">
+                                <h4 class="font-semibold text-gray-600 text-end">Whitening Remove Freckle Cream</h4>
+                            </a>
+                            <p class="text-sm md:text-base text-end">Kem dưỡng sáng da mờ thâm nám tàn nhang</p>
                         </div>
+                        <a href="{{route('product.detail', 'whitening-remove-freckle-cream')}}">
+                            <img class="w-36 h-36 md:w-40 md:h-40 rounded-tr-[50px] rounded-bl-[50px]" src="{{asset('/images/products/whitening-remove-freckle-cream/2.jpg')}}" alt="">
+                        </a>
+                    </div>
+
+                    <div class="flex justify-end gap-4 md:gap-10">
+                        <div class="text-base md:text-lg text-gray-500">
+                            <a href="{{route('product.detail', 'soothing-balance-repair-cream')}}">
+                                <h4 class="font-semibold text-gray-600 text-end">Soothing and restoring essential oils</h4>
+                            </a>
+                            <p class="text-sm md:text-base text-end">Tinh dầu làm dịu và phục hồi da</p>
+                        </div>
+                        <a href="{{route('product.detail', 'soothing-and-restoring-essential-oils')}}">
+                            <img class="w-36 h-36 md:w-40 md:h-40 rounded-tr-[50px] rounded-bl-[50px]" src="{{asset('/images/products/soothing-and-restoring-essential-oils/2.jpg')}}" alt="">
+                        </a>
+                    </div>
+                    <div class="flex justify-end gap-4 md:gap-10">
+                        <div class="text-base md:text-lg text-gray-500">
+                            <a href="{{route('product.detail', 'polypeptide-heal-damaged-skin-ice-crystal')}}">
+                                <h4 class="font-semibold text-gray-600 text-end">Polypeptide Heal damaged skin Ice crystal</h4>
+                            </a>
+                            <p class="text-sm md:text-base text-end">Làm dịu và phục hồi da</p>
+                        </div>
+                        <a href="{{route('product.detail', 'polypeptide-heal-damaged-skin-ice-crystal')}}">
+                            <img class="w-36 h-36 md:w-40 md:h-40 rounded-tr-[50px] rounded-bl-[50px]" src="{{asset('/images/products/polypeptide-heal-damaged-skin-ice-crystal/9.jpg')}}" alt="">
+                        </a>
                     </div>
                 </div>
-                <div class="row mt-md-5 pt-md-5">
-                    <div class="col-lg-4">
-                        <div class="abt-block mb-lg-0 mb-md-5">
-                            <div class="serv_abs serv_bottom">
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <h3>Sức mạnh làm trắng</h3>
-                            <p> Làm giảm sắc tố melanin. <br>
-                                Hiệu quả làm trắng được cải thiện.
-                            </p>
+                <div class="col-span-1 flex flex-col gap-4 gap-6">
+                    <div class="flex justify-start gap-4 md:gap-10">
+                        <a href="{{route('product.detail', 'repair-anti-aging-cream')}}">
+                            <img class="w-36 h-36 md:w-40 md:h-40 rounded-tl-[50px] rounded-br-[50px]" src="{{asset('/images/products/repair-anti-aging-cream/2.jpg')}}" alt="">
+                        </a>
+                        <div class="text-base md:text-lg text-gray-500">
+                            <a href="{{route('product.detail', 'repair-anti-aging-cream')}}">
+                                <h4 class="font-semibold text-gray-600">Repair Anti-Aging Cream</h4>
+                            </a>
+                            <p class="text-sm md:text-base">Kem dưỡng phục hồi chống lão hoá</p>
+                        </div>
+
+                    </div>
+
+                    <div class="flex justify-start gap-4 md:gap-10">
+                        <a href="{{route('product.detail', 'soothing-balance-repair-cream')}}">
+                            <img class="w-36 h-36 md:w-40 md:h-40 rounded-tl-[50px] rounded-br-[50px]" src="{{asset('/images/products/soothing-balance-repair-cream/6.jpg')}}" alt="">
+                        </a>
+                        <div class="text-base md:text-lg text-gray-500">
+                            <a href="{{route('product.detail', 'soothing-balance-repair-cream')}}">
+                                <h4 class="font-semibold text-gray-600">Soothing Balance Repair Cream</h4>
+                            </a>
+                            <p class="text-sm md:text-base">Kem phục hồi cân bằng làm dịu da</p>
                         </div>
                     </div>
-                    <div class="col-lg-4 my-lg-0 my-md-5">
-                        <div class="abt-block">
-                            <div class="serv_abs serv_bottom">
-                                <span class="fa fa-magic"></span>
-                            </div>
-                            <h3>Sức mạnh dưỡng ẩm</h3>
-                            <p> Tăng độ ẩm cho da. <br>
-                                Làm mờ vết nám, tàn nhang.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mt-lg-0 mt-md-5">
-                        <div class="abt-block">
-                            <div class="serv_abs serv_bottom">
-                                <span class="fa fa-child"></span>
-                            </div>
-                            <h3>Sức mạnh tái tạo</h3>
-                            <p> Giảm tỷ lệ dị ứng, các vết đỏ <br>
-                                Tăng cường sức đề kháng cho da</p>
+                    <div class="flex justify-start gap-4 md:gap-10">
+                        <a href="{{route('product.detail', 'repairing-active-white-serum')}}">
+                            <img class="w-36 h-36 md:w-40 md:h-40 rounded-tl-[50px] rounded-br-[50px]" src="{{asset('/images/products/repairing-active-white-serum/4.jpg')}}" alt="">
+                        </a>
+                        <div class="text-base md:text-lg text-gray-500">
+                            <a href="{{route('product.detail', 'repairing-active-white-serum')}}">
+                                <h4 class="font-semibold text-gray-600">Repairing active white serum</h4>
+                            </a>
+                            <p class="text-sm md:text-base">Tinh chất phục hồi Active White</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- //services -->
 
-    <div class="agile-wthree-works py-5" id="some">
-        <div class="container py-xl-5 py-lg-3">
-            <div class="row">
-                <div class="grids-w3ls-right-2 offset-xl-7 offset-md-6" style="width:100%; flex-shrink: unset">
-                    <h4 class="title text-dark mb-lg-2 mb-2">Shinex đặt hiệu quả lên hàng đầu</h4>
-                    <p class="mt-2">
-                        <span style="color:red; font-weight: bold;font-size: 24px; margin-right:5px">*</span>
-                        Công nghệ điều trị theo hướng tác động của SHINEX dựa trên nhiều vấn đề về da,
-                        cung cấp các giải pháp và sản phẩm dưỡng da để giải quyết chính xác và hiệu quả các vấn đề về
-                        da như: Điều trị tàn nhang, đốm đồi mồi, nám da, ban xanh, sạm da do nhiễm chì, bớt sắc tố Ota,
-                        mụn cóc, u ống tuyến mồ hôi, và bớt bẩm sinh. </p>
+        <!-- Section 1 -->
+        <div class="px-2 py-8 md:py-20 ">
+            <div class="text-center">
+                <h2 class="text-xl md:text-3xl font-semibold text-blue-800 pb-3">Chăm sóc da hiệu quả</h2>
+                <div class="flex justify-center">
+                    <img class="h-4 md:h-6" src="{{asset('/images/logo/symbolsection.webp')}}" alt="">
+                </div>
+                <div class="text-blue-400 text-base md:text-lg font-semibold">
+                    <p class="py-1">"Các cách chăm sóc da mà không giải quyết được vấn đề về da đều vô nghĩa"</p>
+                </div>
+            </div>
 
-                    <p class="mt-2">
-                        <span style="color:red; font-weight: bold;font-size: 20px; margin-right:5px">*</span>
-                        Thay đổi hoàn toàn làn da vàng, đen, sần sùi, nếp
-                        nhăn, bọng mắt, quầng mắt, vết chân chim, mụn
-                        trứng cá ở cả thanh thiếu niên và người lớn, cũng
-                        như các nguyên nhân khác gây ra sự thay đổi màu
-                        da, tái tạo vết sẹo lõm, và làm phẳng sẹo lồi.
-                        Giúp làn da trở nên trắng hồng, mịn màng và đầy sức
-                        sống.
-                    </p>
-                    <a href="{{url('/')}}" class="button-w3ls mt-4"><span class="fa fa-hand-o-right mr-2" aria-hidden="true"></span>
-                        Xem thêm
-                    </a>
+            <div class="my-4 md:px-10 md:my-10 flex items-start">
+                <div class="w-[35%] flex flex-col items-center justify-center hidden md:block">
+                    <h3 class="text-2xl font-semibold text-blue-800 pb-8 text-center">Giải quyết các vấn đề <br> thực sự về da</h3>
+                    <div>
+                        <img class="w-72" src="{{asset('/images/background/section1.png')}}" alt="">
+                    </div>
+                </div>
+                <div class="w-full md:w-[65%] flex flex-col gap-4 md:gap-10">
+                    @php
+                        $main_functions = [
+                            (object)[
+                                "title" => "Công nghệ điều trị theo hướng tác động",
+                                "description" => "Công nghệ điều trị theo hướng tác động của SHINEX dựa trên nhiều vấn đề về da, cung cấp các giải pháp
+                                                và sản phẩm dưỡng da để giải quyết chính xác và hiệu quả các vấn đề về da như: Điều trị tàn nhang,
+                                                đốm đồi mồi, nám da, ban xanh, sạm da do nhiễm chì, bớt sắc tố Ota, mụn cóc, u ống tuyến mồ hôi, và bớt bẩm sinh.",
+                                "image" => "/images/products/polypeptide-heal-damaged-skin-ice-crystal/9.jpg",
+                            ],
+                            (object)[
+                                "title" => "Giúp làn da trở nên trắng hồng, mịn màng và đầy sức sống",
+                                "description" => "Thay đổi hoàn toàn làn da vàng, đen, sần sùi, nếp
+                                                nhăn, bọng mắt, quầng mắt, vết chân chim, mụn
+                                                trứng cá ở cả thanh thiếu niên và người lớn, cũng
+                                                như các nguyên nhân khác gây ra sự thay đổi màu
+                                                da, tái tạo vết sẹo lõm, và làm phẳng sẹo lồi.
+                                                Giúp làn da trở nên trắng hồng, mịn màng và đầy sức
+                                                sống.",
+                                "image" => "/images/products/soothing-balance-repair-cream/6.jpg",
+                            ],
+                            (object)[
+                                "title" => "Nuôi dưỡng, làm trắng từ sâu bên trong",
+                                "description" => "Dưỡng chất thấm sâu, cải thiện sắc tố da từ bên trong. Tăng cường nuôi dưỡng, mang lại làn da trắng sáng tự nhiên.
+                                                Làm mờ các đốm nâu trên da, tấn công chuyên sâu các đốm nâu trên da. Giảm sắc tố melanin và giúp làn da trắng sáng.
+                                                Ngăn ngừa các sắc tố không mong muốn. Giảm các đốm tàn nhang và ngăn ngừa tái phát.",
+                                "image" => "/images/products/polypeptide-heal-damaged-skin-ice-crystal/9.jpg",
+                            ],
+]
+                    @endphp
+                    @foreach($main_functions as $function)
+                        <div class="flex gap-4 md:gap-10">
+                            <img class="w-28 h-36 md:w-40 md:h-40 rounded-tr-[50px] rounded-bl-[50px]" src="{{asset($function->image)}}" alt="">
+                            <div class="text-base md:text-lg text-gray-500">
+                                <h4 class="font-semibold text-gray-600">{{$function->title}}</h4>
+                                <p class="text-sm md:text-base">{{$function->description}}</p>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="px-2 py-8 md:py-20">
+            <div class="text-center">
+                <h2 class="text-xl md:text-3xl font-semibold text-blue-800 pb-3 text-center">Hợp tác quốc tế với nhiều nhà cung cấp nguyên liệu hàng đầu</h2>
+                <div class="flex justify-center">
+                    <img class="h-4 md:h-6" src="{{asset('/images/logo/symbolsection.webp')}}" alt="shinex-symbol-section" >
+                </div>
+                <div class="text-blue-400 text-base md:text-l font-semibold">
+                    <p class="py-1"> Tuân thủ triết lý sản xuất: “đảm bảo chất lượng từ nguồn,” hầu hết các thành phần được nhập khẩu từ nước ngoài</p>
+                </div>
+            </div>
+
+            <div class="flex justify-center py-4 md:py-10">
+                <img class="w-full md:w-1/2" src="{{asset('/images/brand/copo.jpg')}}" alt="shinex-hop-tac-quoc-te">
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 items-start gap-4 md:gap-8">
+                <div class="flex gap-4 md:gap-8">
+                    <img class="w-28 h-28 md:w-32 md:h-32 rounded-tr-[50px] rounded-tl-[50px] rounded-bl-[50px] border border-gray-400" src="{{asset('/images/logo/nature.png')}}" alt="">
+                    <div class="text-base md:text-lg text-gray-500">
+                        <h4 class="font-semibold text-gray-600">Sử dụng các thành phần có nguồn gốc tự nhiên</h4>
+                        <p class="text-sm md:text-base">Sử dụng các thành phần tự nhiên, chiết xuất khoa học từ các loại dược liệu quý hiếm, loại bỏ các chất kích ứng gây hại cho da.
+                            Sản xuất vô trùng trong các nhà máy, phân xưởng PIC/SGMP hàng đầu.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 md:gap-8">
+                    <img class="w-28 h-28 md:w-32 md:h-32 rounded-tr-[50px] rounded-tl-[50px] rounded-bl-[50px] border border-gray-400" src="{{asset('/images/logo/heal.png')}}" alt="">
+                    <div class="text-base md:text-lg text-gray-500">
+                        <h4 class="font-semibold text-gray-600">Áp dụng nghiêm ngặt các tiêu chuẩn quốc tế</h4>
+                        <p class="text-sm md:text-base"> Tiêu chuẩn dược phẩm quốc tế, trước khi đưa ra thị trường được kiểm nghiệm
+                            bởi các cơ quan bên thứ ba, phù hợp với các nguyên tắc giám sát an toàn cao nhất.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Section 3 -->
+        <div class="px-2 py-8 md:py-10 grid grid-cols-1 md:grid-cols-5 gap-4 items-start">
+            <div class="col-span 1 md:col-span-2 pl-8 md:pl-20 pr-10 flex flex-col justify-between">
+                <div class="w-full pl-4 md:pl-12">
+                    <p class="font-semibold text-xl md:text-2xl text-white bg-blue-600 px-4 md:px-9 py-2 md:py-5 w-fit font-sans rounded-tr-3xl rounded-bl-3xl self-start">28<br>Ngày</p>
+                    <h3 class="text-lg md:text-xl font-semibold text-blue-800 tracking-widest text-end mt-2">Chu kỳ dưỡng da tái tạo lại sức sống mới</h3>
+                </div>
+                <div class="text-start font-normal text-base md:text-lg mt-6 text-gray-600 flex flex-col gap-4 pl-12">
+                    <p>Bí quyết "điều chỉnh từ bên trong và duy trì vẻ bên ngoài" làn da</p>
+                    <p>Phát triển các mô dưới da</p>
+                    <p>Sử dụng thưởng xuyên, có thể thấy sự thay đổi của làn da</p>
+                </div>
+            </div>
+
+            @php
+                $steps = [
+                    (object)[
+                        "number" => "1",
+                        "title" => "Sức mạnh làm trắng",
+                        "contents" => [
+                            "Làm giảm sắc tố melanin",
+                            "Hiệu quả làm trắng được cải thiện",
+                        ],
+                    ],
+                    (object)[
+                        "number" => "2",
+                        "title" => "Sức mạnh tái tạo",
+                        "contents" => [
+                            "Giảm tỷ lệ dị ứng",
+                            "Các vết đỏ, sưng và ngứa biến mất",
+                            "Tăng cường sức đề kháng cho da",
+                        ],
+                    ],
+                    (object)[
+                        "number" => "3",
+                        "title" => "Sức mạnh dưỡng ẩm",
+                        "contents" => [
+                            "Tăng độ ẩm cho da",
+                        ],
+                    ],
+                ]
+            @endphp
+
+            <div class="col-span 1 md:col-span-3 gap-5">
+                <div class="grid grid-cols-2">
+                    <div class="col-span-1 border-blue-500">
+                        <img class="w-full h-full" src="{{asset('/images/background/chu-ky-duong-da.png')}}" alt="chu-ky-duong-da-28-ngay" />
+                    </div>
+                    <div class="col-span-1 ml-[-25px] md:mt-16">
+                        @foreach($steps as $step)
+                            <div class="my-2 md:my-16 flex justify-start items-center gap-4">
+                                <div class="relative">
+                                    <button class="w-8 h-8 md:w-12 md:h-12 bg-blue-600 rotate-45 "></button>
+                                    <button class="w-8 h-8 md:w-12 md:h-12 text-white font-bold absolute top-0 left-0">{{$step->number}}</button>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-base md:text-lg text-blue-800">{{$step->title}}</h4>
+                                    <div class="text-gray-500 text-sm md:text-base">
+                                        @foreach($step->contents as $content)
+                                            <p>{{$content}}</p>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>

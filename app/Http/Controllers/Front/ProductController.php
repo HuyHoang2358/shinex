@@ -108,6 +108,10 @@ class ProductController extends Controller
                 ],
             ],
             'description' => "Kem dưỡng trắng trị thâm mờ nám là dòng sản phẩm cao cấp trong việc hỗ trợ điều trị các vấn đề về sắc tố, giúp loại bỏ các vùng da tối màu, thâm sạm. đây là sản phẩm vô cùng hiệu quả trong việc ngăn ngừa sự xuất hiện của các vết thâm và hiện tượng da không đều màu. Thành phần chiết xuất tự nhiên an toàn lành tính, bổ sung các dưỡng chất cần thiết cho da, giúp duy trì làn da tươi sáng đầy sức sống",
+            'usefuls' => [
+                "Cấp ẩm, giúp da căng bóng mềm mịn",
+                "Kích thích tăng sinh tế bào mới, thúc đẩy quá trình turn-over trên da",
+            ],
         ];
         $whitening_remove_freckle_cream = (object)[
             'name' => 'Whitening Remove Freckle Cream',

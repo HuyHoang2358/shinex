@@ -20,7 +20,7 @@
 
 @section('content')
     <!-- content -->
-    <div class="container mx-auto px-2 xl:px-36 text-lg grid grid-cols-2 py-12 gap-16 ">
+    <div class="container mx-auto px-2 xl:px-36 text-lg md:grid md:grid-cols-2 py-12 gap-16 ">
         <div class="col-span-1">
             <h1 class="text-3xl font-medium text-blue-500">LIÊN HỆ TƯ VẤN MIỄN PHÍ</h1>
             <div class="flex justify-between mr-16 mt-6 mb-2 font-medium">
@@ -40,8 +40,8 @@
             </div>
             <button type="submit" class="mt-5 bg-blue-500 rounded-tr-3xl rounded-bl-3xl px-9 py-2 text-white">GỬI YÊU CẦU</button>
         </div>
-        <div class="col-span-1">
-            <iframe class="h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.3725064351283!2d105.78100657587142!3d20.977699989529178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135adfb2968be57%3A0x9c41d21e83e735a4!2zVOG6p25nIDkgVMOyYSBuaMOgIEjhu5MgR8awxqFtIFBsYXph!5e0!3m2!1svi!2s!4v1724643395657!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="col-span-1 mt-10 md:mt-0 flex justify-center">
+            <iframe class="md:h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.3725064351283!2d105.78100657587142!3d20.977699989529178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135adfb2968be57%3A0x9c41d21e83e735a4!2zVOG6p25nIDkgVMOyYSBuaMOgIEjhu5MgR8awxqFtIFBsYXph!5e0!3m2!1svi!2s!4v1724643395657!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 @endsection
